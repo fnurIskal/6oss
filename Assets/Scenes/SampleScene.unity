@@ -870,7 +870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290092529460621848, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: m_GravityScale
-      value: 2
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 8290092529460621850, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: m_ActionEvents.Array.size
@@ -1003,6 +1003,22 @@ PrefabInstance:
     - target: {fileID: 8290092529460621851, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8290092529460621852, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
+      propertyPath: m_Size.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8290092529460621852, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
+      propertyPath: m_Size.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8290092529460621852, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1971887038, guid: 36f3fe217990c3a46a4aaae27555d90d, type: 3}
+    - target: {fileID: 8290092529460621852, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8290092529460621853, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: m_Name
