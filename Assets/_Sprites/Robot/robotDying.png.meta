@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 36f3fe217990c3a46a4aaae27555d90d
+guid: 6660a08ed2b529644bba99dc20801b47
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 12
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,7 +94,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Server
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -107,11 +107,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: atck-Sheet_0
+      name: robotDying_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52b5df804c952394e918c1351b981523
-      internalID: -1971887038
+      spriteID: 28d9e32a3f35e4d48987635d18ef425a
+      internalID: -163762968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atck-Sheet_1
+      name: robotDying_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654bc3e94f2e7994f814103c48d1e77c
+      internalID: -173675187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robotDying_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 128
-        height: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +179,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61b96deaa672449428e57802c73fc946
-      internalID: 493904466
+      spriteID: 8bbafc3751d5a534390033d615b9a043
+      internalID: -1929192221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atck-Sheet_2
+      name: robotDying_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac6f42d333faa042b0aa1759856fd5b
+      internalID: -1440253526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robotDying_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 128
-        height: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +221,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e10aa1a5436bdb428624b7c2e0e415a
-      internalID: -1299420851
+      spriteID: cc4dc654c616c844e92c7d416d5ddc7d
+      internalID: 1907636160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atck-Sheet_3
+      name: robotDying_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d7e3aeeede3db41a17db0823999786
+      internalID: -1377314544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robotDying_6
       rect:
         serializedVersion: 2
         x: 384
         y: 0
-        width: 128
-        height: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +263,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1b3cb41e1363d84d9b0d1a58ad21bd0
-      internalID: -2073268282
+      spriteID: 3a140c2eaf8f5d3429d49dfc26860048
+      internalID: 1677936493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atck-Sheet_4
+      name: robotDying_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ae3aaab78746d4090d58e467e1788e
+      internalID: 257698444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robotDying_8
       rect:
         serializedVersion: 2
         x: 512
         y: 0
-        width: 128
-        height: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +305,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29d2c691952373740a82b93bb3126af7
-      internalID: 1535346416
+      spriteID: 7f4449999b562b3448a40f61634e24d7
+      internalID: 358649856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: atck-Sheet_5
+      name: robotDying_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98386b3106415b438d09b741f2f0581
+      internalID: -1523124572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: robotDying_10
       rect:
         serializedVersion: 2
         x: 640
         y: 0
-        width: 128
-        height: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,29 +347,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6577ec990bb7c83449b5e75c8a1a7304
-      internalID: -820254414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: atck-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 047596ddd40aea44ea67a4609161d075
-      internalID: -482251966
+      spriteID: 7a028995ace1d1047980881154699eff
+      internalID: -1876827865
       vertices: []
       indices: 
       edges: []
@@ -280,13 +364,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      atck-Sheet_0: -1971887038
-      atck-Sheet_1: 493904466
-      atck-Sheet_2: -1299420851
-      atck-Sheet_3: -2073268282
-      atck-Sheet_4: 1535346416
-      atck-Sheet_5: -820254414
-      atck-Sheet_6: -482251966
+      robotDying_0: -163762968
+      robotDying_1: -173675187
+      robotDying_10: -1876827865
+      robotDying_2: -1929192221
+      robotDying_3: -1440253526
+      robotDying_4: 1907636160
+      robotDying_5: -1377314544
+      robotDying_6: 1677936493
+      robotDying_7: 257698444
+      robotDying_8: 358649856
+      robotDying_9: -1523124572
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
