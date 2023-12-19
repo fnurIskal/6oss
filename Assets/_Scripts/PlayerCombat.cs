@@ -8,6 +8,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private float attackDamage;
     [SerializeField] private float attackCoolDown;
     [SerializeField] private float attackRange;
+    [SerializeField] private robotShooting damaged;
     private bool canAttack = true;
     public void OnAttack(InputAction.CallbackContext context)
     {
@@ -29,7 +30,11 @@ public class PlayerCombat : MonoBehaviour
             {
                 if (Vector2.Distance(hit.transform.position, transform.position) < attackRange)
                 {
-                    //hit.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+                    if (hit.CompareTag("snowman"))
+                        hit.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+                    else if (hit.CompareTag("robot"))
+                        damaged.takeDamaged(attackDamage);
+
                 }
             }
             yield return new WaitForSeconds(attackCoolDown);

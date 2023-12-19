@@ -110,8 +110,8 @@ public class PlayerMovement : MonoBehaviour
     {
         capsuleCollider.offset = new Vector2(0.008911133f, -1.32495f);
         capsuleCollider.size = new Vector2(1.264221f, 1.620093f);
-        yield return new WaitForSeconds(0.25f);
-        capsuleCollider.offset = new Vector2(0.008911133f, -0.06704926f);
-        capsuleCollider.size = new Vector2(1.264221f, 4.135895f);
+        yield return new WaitForSeconds(0.6f);
+        capsuleCollider.offset = new Vector2(0.008911133f, -0.1000152f);
+        capsuleCollider.size = new Vector2(1.264221f, 3.806233f);
     }
 }
