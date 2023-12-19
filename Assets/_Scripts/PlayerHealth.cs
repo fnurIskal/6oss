@@ -41,14 +41,6 @@ public class healthManager : MonoBehaviour
 
         healthBar.fillAmount = healthAmount / 100f;
     }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("bullet"))
-        {
-            TakeDamage(5);
-        }
-    }
     void loadScene()
     {
         SceneManager.LoadScene("level1");

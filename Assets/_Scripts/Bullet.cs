@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     private Transform Player;
     private Vector2 target;
 
-    public int damage;
+    public int fireDamage;
    
 
     // Start is called before the first frame update
@@ -51,6 +51,7 @@ public class Bullet : MonoBehaviour
         if (other.CompareTag("Player") )
         {
             DestroyBullet();
+            other.GetComponent<healthManager>().TakeDamage(fireDamage);
         }
        
     }

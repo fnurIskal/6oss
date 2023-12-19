@@ -536,12 +536,12 @@ GameObject:
   m_Component:
   - component: {fileID: 470076105}
   m_Layer: 0
-  m_Name: fireguy flip - firebullet hasar alma
+  m_Name: fireguy flip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &470076105
 Transform:
   m_ObjectHideFlags: 0
@@ -777,6 +777,98 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &847736230
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5117930089073578257, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5117930089073578257, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130583639971367514, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_Name
+      value: GumMonster
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130583639971367514, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5652822897443577163, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 910316156}
+    - target: {fileID: 8829104070954123527, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829104070954123527, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829104070954123527, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829104070954123527, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829104070954123527, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829104070954123527, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829104070954123527, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829104070954123527, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829104070954123527, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829104070954123527, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829104070954123527, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829104070954123527, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd02d76739965f04091a45720741f53e, type: 3}
+--- !u!114 &910316156 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 369770644063657437, guid: dd02d76739965f04091a45720741f53e, type: 3}
+  m_PrefabInstance: {fileID: 847736230}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd5ede5fb97495418e8c84e6484ffb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &920001872
@@ -1099,6 +1191,10 @@ PrefabInstance:
     - target: {fileID: 4660708678250362878, guid: 6c5903309592a8e4981b4e8257c934f7, type: 3}
       propertyPath: m_Name
       value: Fire Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4660708678250362878, guid: 6c5903309592a8e4981b4e8257c934f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7983801317538038675, guid: 6c5903309592a8e4981b4e8257c934f7, type: 3}
       propertyPath: Player
@@ -1528,3 +1624,4 @@ SceneRoots:
   - {fileID: 1023211337}
   - {fileID: 942330415}
   - {fileID: 470076105}
+  - {fileID: 847736230}

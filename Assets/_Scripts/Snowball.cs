@@ -8,6 +8,7 @@ public class Snowball : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     public float force;
+    public float snowballDamage;
     private float timer;
     void Start()
     {
@@ -35,6 +36,7 @@ public class Snowball : MonoBehaviour
         {
             rb.bodyType = RigidbodyType2D.Static;
             anim.SetBool("collided", true);
+            collision.GetComponent<healthManager>().TakeDamage(snowballDamage);
         }
     }
     public void Destroy()

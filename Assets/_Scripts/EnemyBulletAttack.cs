@@ -8,6 +8,7 @@ public class EnemyBulletAttack : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
     public float force;
+    public float bulletDamage;
     private float timer;
 
 
@@ -40,6 +41,7 @@ public class EnemyBulletAttack : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
+            other.GetComponent<healthManager>().TakeDamage(bulletDamage);
         }
     }
 }
