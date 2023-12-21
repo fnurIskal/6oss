@@ -7,6 +7,9 @@ TagManager:
   - bullet
   - snowman
   - robot
+  - Enemy
+  - GolemAttack3
+  - GolemAttack2
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - 
+  - Background
   - 
   - 
   - 
@@ -43,4 +46,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1469426433
+    locked: 0
+  - name: Enemy
+    uniqueID: 4275417425
+    locked: 0
+  - name: Decor
+    uniqueID: 3826151067
+    locked: 0
+  - name: Ground
+    uniqueID: 1569030615
     locked: 0

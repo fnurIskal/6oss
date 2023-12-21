@@ -594,8 +594,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -19549871
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 955360677, guid: a504f9be2e053a8428f2a24f0613a69c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -651,8 +651,8 @@ MonoBehaviour:
   shootingRange: 10
   lineOfSite: 15
   healthBar: {fileID: 0}
-  health: 0
-  currentHealth: 0
+  health: 50
+  currentHealth: 50
 --- !u!50 &8651317413993669962
 Rigidbody2D:
   serializedVersion: 4
