@@ -99,7 +99,6 @@ GameObject:
   - component: {fileID: 587236018276297548}
   - component: {fileID: 2116764916136138465}
   - component: {fileID: 6418056821043913417}
-  - component: {fileID: 4140092191370620152}
   - component: {fileID: 7017287926011253503}
   - component: {fileID: 1810181246233478647}
   m_Layer: 8
@@ -168,12 +167,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -230483801, guid: 6a6d019818647b0409e3c70b913bd715, type: 3}
+  m_Sprite: {fileID: -695078852, guid: 7df81b1de09b05f40aa58a3745fee8a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.571429, y: 4.571429}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -250,7 +249,6 @@ MonoBehaviour:
   attack3range: 100
   attack2range: 8
   attack1range: 3.5
-  enemyHealth: {fileID: 4140092191370620152}
   spawnPoints:
   - {fileID: 5487923968759367926}
   - {fileID: 7636298451508995978}
@@ -258,20 +256,6 @@ MonoBehaviour:
   - {fileID: 187295302130987061}
   - {fileID: 3386064210117129927}
   deathTime: 1
---- !u!114 &4140092191370620152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 880742791144465501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e898f6b00f42770429de6134c46e0a65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
 --- !u!114 &7017287926011253503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +307,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 4.571429, y: 4.571429}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 4.571429, y: 4.571429}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
