@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Cinemachine.CinemachineFreeLook;
 
 public class robotShooting : MonoBehaviour
 {
@@ -19,9 +20,9 @@ public class robotShooting : MonoBehaviour
     private GameObject player;
 
     public floatingHealthBar healthBar;
-
     public float health;
     public float currentHealth;
+    private float difY;
 
     private enum MovementState { idle, shoot, damaged, death }
 
@@ -38,11 +39,12 @@ public class robotShooting : MonoBehaviour
     void Update()
     {
         damaged();
-        newFlip();   
-        if (Vector2.Distance(transform.position, player.transform.position) < lineOfSite)                
+        newFlip();
+        difY = transform.position.y - player.transform.position.y;
+        if ((Vector2.Distance(transform.position, player.transform.position) < lineOfSite) && (difY < 5f) && (difY > -5f))
             follow();
         else
-            walking();
+           walking();
     }
     void attacking()
     {
@@ -108,7 +110,7 @@ public class robotShooting : MonoBehaviour
             }
         }
     }
-    private void follow()
+    void follow()
     {
         MovementState state;
         float distanceFromPlayer = Vector2.Distance(transform.position, player.transform.position);
