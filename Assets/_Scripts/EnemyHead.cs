@@ -40,7 +40,7 @@ public class EnemyHead : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) 
             {
-            other.GetComponent<healthManager>().TakeDamage(headDamage);
+            other.GetComponent<PlayerHealth>().TakeDamage(headDamage);
             rb.bodyType = RigidbodyType2D.Static;
             anim.SetTrigger("Die");
         }

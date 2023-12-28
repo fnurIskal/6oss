@@ -30,7 +30,7 @@ public class GolemEarthquake : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.GetComponent<healthManager>().TakeDamage(earthquakeDamage);
+            other.GetComponent<PlayerHealth>().TakeDamage(earthquakeDamage);
         }
     }
 }

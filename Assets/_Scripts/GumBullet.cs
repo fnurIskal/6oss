@@ -30,7 +30,7 @@ public class GumBullet : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             DestroyBullet();
-            other.GetComponent<healthManager>().TakeDamage(gumDamage);
+            other.GetComponent<PlayerHealth>().TakeDamage(gumDamage);
         }
         
     }

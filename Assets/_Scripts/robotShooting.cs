@@ -23,6 +23,7 @@ public class robotShooting : MonoBehaviour
     public float health;
     public float currentHealth;
     private float difY;
+    private bool canDetect = false;
 
     private enum MovementState { idle, shoot, damaged, death }
 
@@ -42,7 +43,10 @@ public class robotShooting : MonoBehaviour
         newFlip();
         difY = transform.position.y - player.transform.position.y;
         if ((Vector2.Distance(transform.position, player.transform.position) < lineOfSite) && (difY < 5f) && (difY > -5f))
+        {
+            canDetect = true;
             follow();
+        }
         else
            walking();
     }
@@ -62,20 +66,23 @@ public class robotShooting : MonoBehaviour
     }
     void walking()
     {
-       
-        if(currentPoint == pointA.transform)
-        { MovementState state;
-            state = MovementState.idle;
-            anim.SetInteger("state", (int)state);
-
+        MovementState state;
+        state = MovementState.idle;
+        anim.SetInteger("state", (int)state);
+        if (currentPoint == pointA.transform)
+        { 
+            if(pointA.transform.position.x < transform.position.x)
+                transform.localScale = new Vector3(-1, 1, 1);
             transform.position = Vector2.MoveTowards(transform.position, pointA.transform.position, speed * Time.deltaTime);
-            if(Vector2.Distance(transform.position,pointA.transform.position)< .2f)
+            if(Vector2.Distance(transform.position, pointA.transform.position) < .2f)
             {
                 currentPoint = pointB.transform;
             }
         }
-        if (currentPoint == pointB.transform)
+        else if (currentPoint == pointB.transform)
         {
+            if (pointB.transform.position.x > transform.position.x)
+                transform.localScale = new Vector3(1, 1, 1);
             transform.position = Vector2.MoveTowards(transform.position, pointB.transform.position, speed * Time.deltaTime);
             if (Vector2.Distance(transform.position, pointB.transform.position) < .2f)
             {
@@ -92,21 +99,23 @@ public class robotShooting : MonoBehaviour
     }
     private void newFlip()
     {
-
-        float a = transform.position.x - player.transform.position.x;
-        if (a > 0)
+        if (canDetect)
         {
-            if (transform.localScale.x > 0)
+            float a = transform.position.x - player.transform.position.x;
+            if (a > 0)
             {
-                flip();
+                if (transform.localScale.x > 0)
+                {
+                    flip();
+                }
             }
-        }
 
-        else
-        {
-            if (transform.localScale.x < 0)
+            else
             {
-                flip();
+                if (transform.localScale.x < 0)
+                {
+                    flip();
+                }
             }
         }
     }

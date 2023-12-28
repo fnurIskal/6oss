@@ -41,7 +41,7 @@ public class EnemyBulletAttack : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
-            other.GetComponent<healthManager>().TakeDamage(bulletDamage);
+            other.GetComponent<PlayerHealth>().TakeDamage(bulletDamage);
         }
     }
 }

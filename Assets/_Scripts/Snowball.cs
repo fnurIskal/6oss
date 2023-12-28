@@ -36,7 +36,7 @@ public class Snowball : MonoBehaviour
         {
             rb.bodyType = RigidbodyType2D.Static;
             anim.SetBool("collided", true);
-            collision.GetComponent<healthManager>().TakeDamage(snowballDamage);
+            collision.GetComponent<PlayerHealth>().TakeDamage(snowballDamage);
         }
     }
     public void Destroy()

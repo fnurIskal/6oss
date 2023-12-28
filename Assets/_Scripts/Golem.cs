@@ -176,7 +176,7 @@ public class Golem : MonoBehaviour
        
         if (Vector2.Distance(transform.position, player.transform.position) < 2.4)
         {
-            player.GetComponent<healthManager>().TakeDamage(damage);
+            player.GetComponent<PlayerHealth>().TakeDamage(damage);
         }
     }
 
