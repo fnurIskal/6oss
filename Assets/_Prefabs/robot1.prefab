@@ -595,7 +595,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -19549871
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 955360677, guid: a504f9be2e053a8428f2a24f0613a69c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -650,7 +650,7 @@ MonoBehaviour:
   speedFollow: 5
   shootingRange: 10
   lineOfSite: 15
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 3083444930789549208}
   health: 50
   currentHealth: 50
 --- !u!50 &8651317413993669962
@@ -689,7 +689,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 8763354177125644711}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c87286ddb1622b44ab44478849fb1b95, type: 2}
+  m_Material: {fileID: 6200000, guid: 4776faa8bd1ade440a155d927a0217ee, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
