@@ -120,8 +120,8 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8290092529460621847}
-        m_TargetAssemblyTypeName: playerMovement, Assembly-CSharp
-        m_MethodName: Move
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -136,8 +136,8 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8290092529460621847}
-        m_TargetAssemblyTypeName: playerMovement, Assembly-CSharp
-        m_MethodName: Jump
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnJump
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -190,11 +190,35 @@ MonoBehaviour:
     m_ActionId: aacaadb7-ed69-4a77-8740-8264c50ac4af
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4727053404648753295}
+        m_TargetAssemblyTypeName: PlayerCombat, Assembly-CSharp
+        m_MethodName: OnAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3da9bdde-7543-4d8b-bab6-cd11046aab64
     m_ActionName: Player/Attack[/Mouse/leftButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4727053404648753295}
+        m_TargetAssemblyTypeName: PlayerCombat, Assembly-CSharp
+        m_MethodName: OnAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8622084c-a6f2-4954-9869-6164eb4cb990
     m_ActionName: Player/Dash[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
@@ -274,7 +298,7 @@ Animator:
   m_GameObject: {fileID: 8290092529460621853}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c2c3bfbe729b5c84bbf46905321bccf3, type: 2}
+  m_Controller: {fileID: 9100000, guid: ae0b79f6e93bd3b47a4b4773367c405d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -297,18 +321,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62c30958d097f44b98f3126f2884a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  capsuleCollider: {fileID: 0}
+  capsuleCollider: {fileID: 8290092529460621849}
   rb: {fileID: 8290092529460621848}
   groundCheck: {fileID: 8290092529844553396}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   anim: {fileID: 8290092529460621846}
   moveSpeed: 7.5
   jumpingForce: 15
-  dashSpeed: 0
-  dashDuration: 0
-  dashCooldown: 0
+  dashSpeed: 15
+  dashDuration: 2
+  dashCooldown: 1
 --- !u!114 &4727053404648753295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,13 +345,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8186f231036d0e84dbd92fbd07b82927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 8290092529460621846}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
-  attackDamage: 0
-  attackCoolDown: 0
-  attackRange: 0
+    m_Bits: 64
+  attackDamage: 10
+  attackCoolDown: 2
+  attackRange: 5
   damaged: {fileID: 0}
 --- !u!114 &1534857635109113615
 MonoBehaviour:
@@ -342,6 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
+  anim: {fileID: 8290092529460621846}
   healthAmount: 100
 --- !u!1 &8290092529844553397
 GameObject:
