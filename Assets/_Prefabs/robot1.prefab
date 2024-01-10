@@ -651,8 +651,8 @@ MonoBehaviour:
   shootingRange: 10
   lineOfSite: 15
   healthBar: {fileID: 3083444930789549208}
-  health: 50
-  currentHealth: 50
+  health: 20
+  currentHealth: 20
 --- !u!50 &8651317413993669962
 Rigidbody2D:
   serializedVersion: 4

@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - bullet
-  - snowman
-  - robot
-  - Enemy
-  - GolemAttack3
-  - GolemAttack2
-  - Trap
+  tags: []
   layers:
   - Default
   - TransparentFX

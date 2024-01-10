@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
-  bulletDamage: 5
+  bulletDamage: 4
 --- !u!61 &-6138324432290416691
 BoxCollider2D:
   m_ObjectHideFlags: 0

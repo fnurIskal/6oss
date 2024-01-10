@@ -5,11 +5,16 @@ public class PlayerCombat : MonoBehaviour
 {
     [SerializeField] private Animator anim;
     [SerializeField] private LayerMask enemyLayers;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private GameObject fire;
+    [SerializeField] private GameObject fireSpawn;
     [SerializeField] private float attackDamage;
     [SerializeField] private float attackCoolDown;
     [SerializeField] private float attackRange;
     [SerializeField] private robotShooting damaged;
     private bool canAttack = true;
+    private bool canFire = true;
+    private bool canWater = true;
     public void OnAttack(InputAction.CallbackContext context)
     {
         if (context.performed && canAttack)
@@ -17,6 +22,23 @@ public class PlayerCombat : MonoBehaviour
             StartCoroutine(Attack());
         }
     }
+    public void OnFire(InputAction.CallbackContext context)
+    {
+        if (context.performed && canFire)
+        {
+            Debug.Log("hhh");
+            StartCoroutine(Fire());
+        }
+    }
+
+    public void OnWater(InputAction.CallbackContext context)
+    {
+        if (context.performed && canWater)
+        {
+            StartCoroutine(Water());
+        }
+    }
+
     IEnumerator Attack()
     {
         if (canAttack)
@@ -34,11 +56,42 @@ public class PlayerCombat : MonoBehaviour
                         hit.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
                     else if (hit.CompareTag("robot"))
                         damaged.takeDamaged(attackDamage);
-
+                    //sakýzguy da ekle kýnýk
                 }
             }
             yield return new WaitForSeconds(attackCoolDown);
             canAttack = true;
+        }
+    }
+    IEnumerator Fire()
+    {
+        if (canFire)
+        {
+            rb.bodyType = RigidbodyType2D.Static;
+            canFire = false;
+            anim.SetTrigger("fire");
+            yield return new WaitForSeconds(0.9f);
+
+            Instantiate(fire, fireSpawn.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.6f);
+            canFire = true;
+            rb.bodyType = RigidbodyType2D.Dynamic;
+        }
+    }
+
+    IEnumerator Water()
+    {
+        if (canWater)
+        {
+            rb.bodyType = RigidbodyType2D.Static;
+            canWater = false;
+            anim.SetTrigger("water");
+            yield return new WaitForSeconds(0.7f);
+            
+            Instantiate(fire, fireSpawn.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.5f);//düzelt 0.4789
+            canWater = true;
+            rb.bodyType = RigidbodyType2D.Dynamic;
         }
     }
 }

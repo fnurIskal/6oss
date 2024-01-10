@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5874798416002814286}
   m_Layer: 0
   m_Name: head
-  m_TagString: GolemAttack3
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 4
-  headDamage: 5
+  headDamage: 10
 --- !u!61 &6939313635120172663
 BoxCollider2D:
   m_ObjectHideFlags: 0

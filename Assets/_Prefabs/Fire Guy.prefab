@@ -199,5 +199,5 @@ MonoBehaviour:
   Player: {fileID: 0}
   startTimeBtwShots: 2
   bullet: {fileID: 3779563276959974387, guid: 58a8707b90e9f1841907ffcde773caea, type: 3}
-  health: 0
-  maxHealth: 10
+  health: 100
+  maxHealth: 100

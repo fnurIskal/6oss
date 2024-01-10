@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 3462180774202187313, guid: 84002cce3eb3f9d4981c96c31bfaa478, type: 3}
-  damage: 20
+  damage: 30
   headPos: {fileID: 7587304190567172501}
   earthquake: {fileID: 1843449131973343361, guid: 4769df2a3d4cf834c9fa4c8b8115a76e, type: 3}
   earthquakePos:
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4706d31d3834b0e4cbd95f4c24a08376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 100
+  currentHealth: 150
   damage: 5
 --- !u!60 &1810181246233478647
 PolygonCollider2D:

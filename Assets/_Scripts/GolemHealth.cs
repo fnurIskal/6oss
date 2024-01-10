@@ -29,7 +29,7 @@ public class GolemHealth : MonoBehaviour
         }
     }
     public void TakeDamage(float damage)
-    {
+    {//su ve ateþ için düzenle
         currentHealth -= damage;
     }
 }

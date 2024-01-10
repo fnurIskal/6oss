@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2998210958144277245}
   m_Layer: 0
   m_Name: Attack2_Anim
-  m_TagString: GolemAttack2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9049675d230e9e24aa0b4ed292eb51b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  earthquakeDamage: 5
+  earthquakeDamage: 20
 --- !u!60 &2998210958144277245
 PolygonCollider2D:
   m_ObjectHideFlags: 0
