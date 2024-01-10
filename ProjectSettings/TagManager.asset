@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - GolemAttack3
   - GolemAttack2
+  - Trap
   layers:
   - Default
   - TransparentFX
