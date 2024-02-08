@@ -26,7 +26,6 @@ public class PlayerCombat : MonoBehaviour
     {
         if (context.performed && canFire)
         {
-            Debug.Log("hhh");
             StartCoroutine(Fire());
         }
     }
