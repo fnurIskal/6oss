@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 8290092529460621847}
   - component: {fileID: 4727053404648753295}
   - component: {fileID: 1534857635109113615}
+  - component: {fileID: 1239257928397564087}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -253,6 +254,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8622084c-a6f2-4954-9869-6164eb4cb990
     m_ActionName: Player/Dash[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 88e1da13-124e-4969-a16d-761ffe3fba0f
+    m_ActionName: Player/Fire[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a04495b2-c0db-43b4-8aba-a28a6cae5098
+    m_ActionName: Player/Water[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -383,6 +392,7 @@ MonoBehaviour:
     m_Bits: 64
   rb: {fileID: 0}
   fire: {fileID: 0}
+  fireSpawn: {fileID: 0}
   attackDamage: 10
   attackCoolDown: 2
   attackRange: 5
@@ -402,6 +412,18 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   anim: {fileID: 8290092529460621846}
   healthAmount: 100
+--- !u!114 &1239257928397564087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8290092529460621853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d1a0cf86e35664faba388dfbda560c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8290092529844553397
 GameObject:
   m_ObjectHideFlags: 0
