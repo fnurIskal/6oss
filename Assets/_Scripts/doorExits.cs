@@ -6,19 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class doorExits : MonoBehaviour
 {
+    private string currentSceneName;
+    private PlayerHealth playerHealth;
     private void Start()
     {
-
+        playerHealth = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        string currentSceneName = SceneManager.GetActiveScene().name;
+        currentSceneName = SceneManager.GetActiveScene().name;
         if (collision.CompareTag("Player"))
         {
             switch (currentSceneName)
             {
                 case "memo":
-                    //Thread.Sleep(500);
+                    Thread.Sleep(500);
                     SceneManager.LoadScene("emran");
 
                     break;
@@ -30,8 +32,11 @@ public class doorExits : MonoBehaviour
                     break;
 
                 case "begum":
-                    Thread.Sleep(500);
-                    SceneManager.LoadScene("ýsgal");
+                    if (playerHealth.hasKey)
+                    {
+                        Thread.Sleep(500);
+                        SceneManager.LoadScene("ýsgal");
+                    }
 
                     break;
 

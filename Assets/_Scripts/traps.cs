@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class traps : MonoBehaviour
 {
+    public Animator anim;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("bigTrap"))
         {
-            Destroy(gameObject);
+            gameObject.GetComponent<PlayerHealth>().Die();
         }
         else if (collision.CompareTag("smallTrap"))
         {
-            //can azaltma
+            gameObject.GetComponent<PlayerHealth>().TakeDamage(10); // rastgele deger verdim
         }
     }
 }
