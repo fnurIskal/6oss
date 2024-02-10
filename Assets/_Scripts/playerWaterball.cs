@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class playerFireball : MonoBehaviour
+public class playerWaterball : MonoBehaviour
 {
     private float force = 5f;
     private float lifeTime = 3f;

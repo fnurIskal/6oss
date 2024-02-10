@@ -390,9 +390,10 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
-  rb: {fileID: 0}
-  fire: {fileID: 0}
-  fireSpawn: {fileID: 0}
+  rb: {fileID: 8290092529460621848}
+  fire: {fileID: 6599619454480061399, guid: 01213c84607e0e048adcd69f7d3ad54b, type: 3}
+  water: {fileID: 4161459299488175348, guid: f5066904d8c72924994c92b9436c0e33, type: 3}
+  fireSpawn: {fileID: 834228438854514479}
   attackDamage: 10
   attackCoolDown: 2
   attackRange: 5
@@ -411,7 +412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   anim: {fileID: 8290092529460621846}
-  rb: {fileID: 0}
+  rb: {fileID: 8290092529460621848}
   healthAmount: 100
   hasKey: 0
 --- !u!114 &1239257928397564087
@@ -426,7 +427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d1a0cf86e35664faba388dfbda560c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 8290092529460621846}
 --- !u!1 &8290092529844553397
 GameObject:
   m_ObjectHideFlags: 0

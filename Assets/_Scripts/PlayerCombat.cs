@@ -7,6 +7,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private LayerMask enemyLayers;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameObject fire;
+    [SerializeField] private GameObject water;
     [SerializeField] private GameObject fireSpawn;
     [SerializeField] private float attackDamage;
     [SerializeField] private float attackCoolDown;
@@ -87,8 +88,8 @@ public class PlayerCombat : MonoBehaviour
             anim.SetTrigger("water");
             yield return new WaitForSeconds(0.7f);
             
-            Instantiate(fire, fireSpawn.transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(0.5f);//düzelt 0.4789
+            Instantiate(water, fireSpawn.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.4789f);
             canWater = true;
             rb.bodyType = RigidbodyType2D.Dynamic;
         }
