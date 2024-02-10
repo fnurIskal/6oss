@@ -396,7 +396,7 @@ MonoBehaviour:
   moveSpeed: 7.5
   jumpingForce: 15
   dashSpeed: 15
-  dashDuration: 2
+  dashDuration: 0.6
   dashCooldown: 1
 --- !u!114 &4727053404648753295
 MonoBehaviour:
@@ -418,8 +418,8 @@ MonoBehaviour:
   fire: {fileID: 6599619454480061399, guid: 01213c84607e0e048adcd69f7d3ad54b, type: 3}
   water: {fileID: 4161459299488175348, guid: f5066904d8c72924994c92b9436c0e33, type: 3}
   fireSpawn: {fileID: 834228438854514479}
-  attackDamage: 10
-  attackCoolDown: 2
+  attackDamage: 5
+  attackCoolDown: 1
   attackRange: 5
   damaged: {fileID: 0}
 --- !u!114 &1534857635109113615
