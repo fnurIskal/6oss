@@ -1261,7 +1261,11 @@ PrefabInstance:
     - target: {fileID: 4727053404648753295, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: fire
       value: 
-      objectReference: {fileID: 392514788471005606, guid: 85d56292dbf4ed642894a62db3dd2122, type: 3}
+      objectReference: {fileID: 6599619454480061399, guid: 01213c84607e0e048adcd69f7d3ad54b, type: 3}
+    - target: {fileID: 4727053404648753295, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
+      propertyPath: water
+      value: 
+      objectReference: {fileID: 4161459299488175348, guid: f5066904d8c72924994c92b9436c0e33, type: 3}
     - target: {fileID: 4727053404648753295, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: damaged
       value: 
@@ -1296,7 +1300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8290092529460621847, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: moveSpeed
-      value: 8
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 8290092529460621847, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: dashCooldown

@@ -7,15 +7,17 @@ public class PlayerHealth : MonoBehaviour
 {
     public Slider healthBar;
     public Animator anim;
+    public Rigidbody2D rb;
     public float healthAmount = 100f;
     private bool isDeath = false;
+    public bool hasKey = false;
 
     void Update()
     {
         if (healthAmount <= 0 && !isDeath)
         {
             isDeath = true;
-            anim.SetTrigger("Death");
+            Die();
         }
     }
     public void TakeDamage(float damage)
@@ -31,5 +33,15 @@ public class PlayerHealth : MonoBehaviour
         healthAmount = Mathf.Clamp(healthAmount, 0, 100);
 
         healthBar.value = healthAmount / 100f;
+    }
+    public void Die()
+    {
+        rb.bodyType = RigidbodyType2D.Static;
+        anim.SetTrigger("Death");
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Key"))
+            hasKey = true;
     }
 }
