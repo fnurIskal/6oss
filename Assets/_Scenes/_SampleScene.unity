@@ -1279,6 +1279,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4727053404648753295, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
+      propertyPath: bulletSpawn
+      value: 
+      objectReference: {fileID: 1382403264}
+    - target: {fileID: 4727053404648753295, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: attackDamage
       value: 5
       objectReference: {fileID: 0}

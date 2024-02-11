@@ -4,16 +4,17 @@ public class SnowmanAI : MonoBehaviour
 {
     public Animator anim;
     public SpriteRenderer sprite;
-    public GameObject player;
     public GameObject snowball;
     public Transform[] snowballPos;
     private int condition;
     private float timer;
+    private GameObject player;
     [SerializeField] private EnemyHealth enemyHealth;
     [SerializeField] private float attackInterval;
     [SerializeField] private float detectRange;
     private void Start()
     {
+        player = GameObject.FindWithTag("Player");
         enemyHealth.currentHealth = enemyHealth.maxHealth;
     }
     void Update()
