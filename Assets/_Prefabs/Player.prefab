@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7602512416052392287}
   m_Layer: 0
-  m_Name: fireSpawn
+  m_Name: bulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8290092529460621851}
-  - component: {fileID: 8290092529460621852}
+  - component: {fileID: 1870657607829536233}
   - component: {fileID: 8290092529460621850}
   - component: {fileID: 8290092529460621848}
   - component: {fileID: 8290092529460621849}
@@ -73,7 +73,7 @@ Transform:
   - {fileID: 7602512416052392287}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8290092529460621852
+--- !u!212 &1870657607829536233
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,7 +119,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -398,6 +398,7 @@ MonoBehaviour:
   dashSpeed: 15
   dashDuration: 0.6
   dashCooldown: 1
+  isFacingRight: 1
 --- !u!114 &4727053404648753295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,7 +418,7 @@ MonoBehaviour:
   rb: {fileID: 8290092529460621848}
   fire: {fileID: 6599619454480061399, guid: 01213c84607e0e048adcd69f7d3ad54b, type: 3}
   water: {fileID: 4161459299488175348, guid: f5066904d8c72924994c92b9436c0e33, type: 3}
-  fireSpawn: {fileID: 834228438854514479}
+  bulletSpawn: {fileID: 834228438854514479}
   attackDamage: 5
   attackCoolDown: 1
   attackRange: 5

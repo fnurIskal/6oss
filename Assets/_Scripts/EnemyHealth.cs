@@ -5,6 +5,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private Animator anim;
     public float maxHealth;
     public float currentHealth;
+    public bool isDead = false;
     void Start()
     {
         currentHealth = maxHealth;
@@ -13,6 +14,10 @@ public class EnemyHealth : MonoBehaviour
     void Update()
     {
         healthBar.GetComponent<floatingHealthBar>().UpdateHealthBar(currentHealth, maxHealth);
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
     public void TakeDamage(float damage)
     {
@@ -21,12 +26,12 @@ public class EnemyHealth : MonoBehaviour
         healthBar.GetComponent<floatingHealthBar>().UpdateHealthBar(currentHealth, maxHealth);
         if (currentHealth <= 0)
         {
-            Debug.Log("Öldük.");
             Die();
         }
     }
     public void Die()
     {
+        isDead = true;
         anim.SetTrigger("death");
     }
     public void Destroy()

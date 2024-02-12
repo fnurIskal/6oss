@@ -24,7 +24,7 @@ AnimatorState:
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
-  m_CycleOffsetParameter: 
+  m_CycleOffsetParameter: cycleTiming
   m_TimeParameter: 
 --- !u!91 &9100000
 AnimatorController:
@@ -59,7 +59,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -1568025643327622690}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_Position: {x: 350, y: 120, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

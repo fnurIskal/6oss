@@ -9,6 +9,7 @@ TagManager:
   - bigTrap
   - smallTrap
   - Key
+  - Snowman
   layers:
   - Default
   - TransparentFX

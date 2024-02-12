@@ -8,7 +8,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameObject fire;
     [SerializeField] private GameObject water;
-    [SerializeField] private GameObject fireSpawn;
+    [SerializeField] private GameObject bulletSpawn;
     [SerializeField] private float attackDamage;
     [SerializeField] private float attackCoolDown;
     [SerializeField] private float attackRange;
@@ -16,6 +16,7 @@ public class PlayerCombat : MonoBehaviour
     private bool canAttack = true;
     private bool canFire = true;
     private bool canWater = true;
+    private bool isAttacking = false;
     public void OnAttack(InputAction.CallbackContext context)
     {
         if (context.performed && canAttack)
@@ -52,9 +53,9 @@ public class PlayerCombat : MonoBehaviour
             {
                 if (Vector2.Distance(hit.transform.position, transform.position) < attackRange)
                 {
-                    if (hit.CompareTag("snowman"))
+                    if (hit.CompareTag("Snowman"))
                         hit.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
-                    else if (hit.CompareTag("robot"))
+                    else if (hit.CompareTag("Robot"))
                         damaged.takeDamaged(attackDamage);
                     //sakýzguy da ekle kýnýk
                 }
@@ -65,33 +66,35 @@ public class PlayerCombat : MonoBehaviour
     }
     IEnumerator Fire()
     {
-        if (canFire)
+        if (canFire && !isAttacking)
         {
-            rb.bodyType = RigidbodyType2D.Static;
             canFire = false;
+            isAttacking = true;
             anim.SetTrigger("fire");
             yield return new WaitForSeconds(0.9f);
 
-            Instantiate(fire, fireSpawn.transform.position, Quaternion.identity);
+            Instantiate(fire, bulletSpawn.transform.position, Quaternion.identity);
+
             yield return new WaitForSeconds(0.6f);
             canFire = true;
-            rb.bodyType = RigidbodyType2D.Dynamic;
+            isAttacking = false;
         }
     }
 
     IEnumerator Water()
     {
-        if (canWater)
+        if (canWater && !isAttacking)
         {
-            rb.bodyType = RigidbodyType2D.Static;
             canWater = false;
+            isAttacking = true;
             anim.SetTrigger("water");
             yield return new WaitForSeconds(0.7f);
-            
-            Instantiate(water, fireSpawn.transform.position, Quaternion.identity);
+
+            Instantiate(water, bulletSpawn.transform.position, Quaternion.identity);
+
             yield return new WaitForSeconds(0.4789f);
             canWater = true;
-            rb.bodyType = RigidbodyType2D.Dynamic;
+            isAttacking = false;
         }
     }
 }
