@@ -2256,6 +2256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: broken box (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4655498954049318530, guid: 5ef5671f22ba4b24dade5d7931736404, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

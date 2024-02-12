@@ -10,6 +10,8 @@ TagManager:
   - smallTrap
   - Key
   - Snowman
+  - Box
+  - Robot
   layers:
   - Default
   - TransparentFX

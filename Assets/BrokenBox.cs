@@ -1,32 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class BrokenBox : MonoBehaviour
 {
     private ParticleSystem particle;
     private SpriteRenderer sr;
-
+    private bool isBreaking = false;
+    private float breakStartTime;
     private void Awake()
     {
         particle = GetComponentInChildren<ParticleSystem>();
-        sr=GetComponent <SpriteRenderer>();
+        sr = GetComponent<SpriteRenderer>();
     }
-
-    private void OnCollisionEnter2D(Collision2D other)
+    private void Update()
     {
-
-        if (other.collider.gameObject.GetComponent<PlayerMovement>())
-           StartCoroutine( Break());
-
+        if (!isBreaking)
+        {
+            float elapsedTime = Time.deltaTime - breakStartTime;
+            if (elapsedTime >= particle.main.startLifetime.constantMax)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
-
-    private IEnumerator Break()
+    public void StartBreaking()
     {
         particle.Play();
         sr.enabled = false;
-        yield return new WaitForSeconds(particle.main.startLifetime.constantMax);
-        Destroy(gameObject);
+        isBreaking = true;
+        breakStartTime = Time.deltaTime;
     }
 }

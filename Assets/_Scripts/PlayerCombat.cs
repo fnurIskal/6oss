@@ -57,7 +57,8 @@ public class PlayerCombat : MonoBehaviour
                         hit.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
                     else if (hit.CompareTag("Robot"))
                         damaged.takeDamaged(attackDamage);
-                    //sakýzguy da ekle kýnýk
+                    else if (hit.CompareTag("Box"))
+                        hit.GetComponent<BrokenBox>().StartBreaking();
                 }
             }
             yield return new WaitForSeconds(attackCoolDown);
