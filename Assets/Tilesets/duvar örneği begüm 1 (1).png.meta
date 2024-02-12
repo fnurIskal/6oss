@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -127,9 +127,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 64
-        height: 64
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,323 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0fc6d8ba9d909a479543777ed6e3664
+      spriteID: c8c934c5d782ec34b86585ea4b97fadf
       internalID: -1393200624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_1"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83fdf925dd387004ba6fdd09161e019b
+      internalID: 1076303363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_2"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c03fd19e0f25045af21c27b37ac536
+      internalID: 1047810643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_3"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f61c8ff5528d74f83045f933e934ae
+      internalID: -991761832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_4"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6baf9e48994804db32d9f333a0f77d
+      internalID: -136579129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_5"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9411a2ede4337a4abd9fd9ed3b6246e
+      internalID: 1645668214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_6"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf02adc626d90044c8a4303b938918cf
+      internalID: 157909419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_7"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556bb24c358716847af8602989b01270
+      internalID: 1556185089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_8"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbaffe593436dc14e9b4716db99b5728
+      internalID: -484739635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_9"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfb96a7dc7aeb047bbfe7785069a5d2
+      internalID: -869196266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_10"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2b4f949672445499031103d545135f
+      internalID: -977628060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_11"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a407d5a53d5da949b840e6248db304d
+      internalID: 2058847497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_12"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3756d676720f89a448b616ed2e579aba
+      internalID: -1876748730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_13"
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737db345f0e4bc74bac5a77a5b1b2c96
+      internalID: 1171943782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_14"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67d2c81601c72f47bd1899a422b2669
+      internalID: -1042710534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_15"
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee0fb97355fc294d9d585c8bc4b9f9f
+      internalID: -770897790
       vertices: []
       indices: 
       edges: []
@@ -155,6 +470,21 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_0": -1393200624
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_1": 1076303363
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_10": -977628060
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_11": 2058847497
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_12": -1876748730
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_13": 1171943782
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_14": -1042710534
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_15": -770897790
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_2": 1047810643
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_3": -991761832
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_4": -136579129
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_5": 1645668214
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_6": 157909419
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_7": 1556185089
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_8": -484739635
+      "duvar \xF6rne\u011Fi beg\xFCm 1 (1)_9": -869196266
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

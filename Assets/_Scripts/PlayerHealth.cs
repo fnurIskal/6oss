@@ -42,6 +42,9 @@ public class PlayerHealth : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Key"))
+        {
             hasKey = true;
+            Destroy(collision.gameObject);
+        }
     }
 }
