@@ -4,12 +4,14 @@ public class BrokenBox : MonoBehaviour
 {
     private ParticleSystem particle;
     private SpriteRenderer sr;
+    private BoxCollider2D boxcollider2D;
     private bool isBreaking = false;
     private float breakStartTime;
     private void Awake()
     {
         particle = GetComponentInChildren<ParticleSystem>();
         sr = GetComponent<SpriteRenderer>();
+        boxcollider2D = GetComponent<BoxCollider2D>();
     }
     private void Update()
     {
@@ -26,6 +28,7 @@ public class BrokenBox : MonoBehaviour
     {
         particle.Play();
         sr.enabled = false;
+        boxcollider2D.enabled = false;
         isBreaking = true;
         breakStartTime = Time.deltaTime;
     }
