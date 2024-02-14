@@ -12,6 +12,8 @@ TagManager:
   - Snowman
   - Box
   - Robot
+  - Fireguy
+  - Golem
   layers:
   - Default
   - TransparentFX

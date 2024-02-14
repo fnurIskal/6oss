@@ -59,6 +59,8 @@ public class PlayerCombat : MonoBehaviour
                         damaged.takeDamaged(attackDamage);
                     else if (hit.CompareTag("Box"))
                         hit.GetComponent<BrokenBox>().StartBreaking();
+                    else if (hit.CompareTag("Fireguy"))
+                        hit.GetComponent<FireGuy>().EnemyTakeDamage(attackDamage);
                 }
             }
             yield return new WaitForSeconds(attackCoolDown);

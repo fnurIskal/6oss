@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2072851724435559318}
   - component: {fileID: 6239724226279406680}
   - component: {fileID: 7983801317538038675}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fire Guy
-  m_TagString: Untagged
+  m_TagString: Fireguy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +33,8 @@ Transform:
   m_LocalPosition: {x: 9.89, y: -14.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8974294630483462904}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4393405525254807018
@@ -201,3 +202,35 @@ MonoBehaviour:
   bullet: {fileID: 3779563276959974387, guid: 58a8707b90e9f1841907ffcde773caea, type: 3}
   health: 100
   maxHealth: 100
+  bulletSpawnpos: {fileID: 7787012228833523624}
+--- !u!1 &7787012228833523624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8974294630483462904}
+  m_Layer: 6
+  m_Name: bulletSpawnpos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8974294630483462904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7787012228833523624}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.31, y: 0.74, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8377487647000068993}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

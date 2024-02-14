@@ -27,12 +27,12 @@ public class playerFireball : MonoBehaviour
             spriteRenderer.flipX = true;
         }
     }
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.gameObject.CompareTag(""))
-    //    {
-    //        Destroy(gameObject);
-    //        other.GetComponent<PlayerHealth>().TakeDamage(bulletDamage);
-    //    }
-    //}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Fireguy"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<FireGuy>().EnemyTakeDamage(5);
+        }
+    }
 }

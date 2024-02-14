@@ -10,16 +10,14 @@ public class FireGuy : MonoBehaviour
     public float retreatDistance;
     public float shootingRange;
     public Transform Player;
-    private float timeBtwShots;
     public float startTimeBtwShots;
     public GameObject bullet;
     private Animator anim;
     public float health;
     public float maxHealth=10f;
     private Rigidbody2D rb;
-    private bool isPlayerAttacking = false;
-   
-   
+    private bool isAttacking = false;
+    public GameObject bulletSpawnpos;
     enum MovementState { idle,attack,hurt,death}
     
     void Start()
@@ -37,13 +35,6 @@ public class FireGuy : MonoBehaviour
     void Update()
     {
         MovementState state;
-
-        // Oyuncunun saldýrý durumu kontrol ediliyor
-        if (isPlayerAttacking)
-        {
-            // Düþmanýn hasar almasý
-            EnemyTakeDamage(1); // Hasar miktarý burada 1 olarak varsayýlmýþtýr, deðiþtirebilirsiniz
-        }
 
         if (Player.position.x < transform.position.x)
             transform.localScale = new Vector3(-1, 1, 1);
@@ -68,20 +59,22 @@ public class FireGuy : MonoBehaviour
         }
     
 
-        if (Vector2.Distance(transform.position, Player.position) <= shootingRange && timeBtwShots <= 0)
+        if (Vector2.Distance(transform.position, Player.position) <= shootingRange && !isAttacking)
         {
+            StartCoroutine(Attack());
+        }
+    }
+    private IEnumerator Attack()
+    {
+        MovementState state;
+        if (!isAttacking)
+        {
+            isAttacking = true;
             state = MovementState.attack;
             anim.SetInteger("state", (int)state);
-            
-            timeBtwShots = startTimeBtwShots;
-
+            yield return new WaitForSeconds(3f);
+            isAttacking = false;
         }
-        else
-        {
-            timeBtwShots-=Time.deltaTime;
-        }
-
-
     }
 
     private void OnDrawGizmosSelected()
@@ -93,9 +86,9 @@ public class FireGuy : MonoBehaviour
     }
     public void SpawnFireball()
     {
-        Instantiate(bullet, transform.position, Quaternion.identity);
+        Instantiate(bullet, bulletSpawnpos.transform.position, Quaternion.identity);
     }
-    public void EnemyTakeDamage(int amount)
+    public void EnemyTakeDamage(float amount)
     {
         Debug.Log("!");
         health -= amount;
