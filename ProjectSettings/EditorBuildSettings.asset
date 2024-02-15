@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/umud.unity
     guid: e4d3c3ce524bb4d4f815205851bf481f
+  - enabled: 1
+    path: Assets/_Scenes/MainMenu.unity
+    guid: 6a2a3ce84adb7a24183d17f46b1aa370
   m_configObjects: {}

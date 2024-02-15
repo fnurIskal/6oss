@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing = false;
     private bool canDash = true;
     private float horizontal;
+    private bool isPaused = false;
     private enum MovementState {idle, run, jump, fall}
     void Update()
     {
@@ -81,6 +82,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed && canDash)
             StartCoroutine(Dash());
+    }
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            isPaused = !isPaused;
+            GameObject.Find("SceneHandler").GetComponent<SceneHandler>().PauseMenu(isPaused);
+        }
     }
     private bool IsGrounded()
     {
