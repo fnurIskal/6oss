@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 278469956174671220}
   - component: {fileID: 5348473343943104982}
   - component: {fileID: 3131375886300832303}
-  - component: {fileID: 2143038465130911254}
+  - component: {fileID: 1582560420330444942}
   m_Layer: 0
   m_Name: playerFire
   m_TagString: Untagged
@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 278469956174671220}
---- !u!58 &2143038465130911254
-CircleCollider2D:
+--- !u!61 &1582560420330444942
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -153,6 +153,16 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.5062454, y: 0.5731076}
+  m_Offset: {x: -1.4691806, y: 0.56284267}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.3333335, y: 2.6666667}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.36688733
+  m_Size: {x: 0.6024084, y: 0.4875883}
+  m_EdgeRadius: 0

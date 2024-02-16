@@ -152,9 +152,9 @@ GameObject:
   - component: {fileID: 9009821946787803621}
   - component: {fileID: 6160869505674680779}
   - component: {fileID: 5652822897443577163}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GumMonster
-  m_TagString: Untagged
+  m_TagString: Sakizguy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
   lineOfSite: 10
   health: 70
   maxHealth: 70
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 369770644063657437}
   startTimeBtwShots: 2
   bullet: {fileID: 5807501795557657574, guid: 16efa941bd1338245846a08a7600e538, type: 3}
 --- !u!1 &7807907704376107540

@@ -34,12 +34,14 @@ public class doorExits : MonoBehaviour
             {
                 case "memo":
                     Thread.Sleep(500);
+                    PlayerPrefs.SetInt("level", 2);
                     SceneManager.LoadScene("emran");
 
                     break;
 
                 case "emran":
                     Thread.Sleep(500);
+                    PlayerPrefs.SetInt("level", 3);
                     SceneManager.LoadScene("begum");
 
                     break;
@@ -48,6 +50,7 @@ public class doorExits : MonoBehaviour
                     if (playerHealth.hasKey)
                     {
                         Thread.Sleep(500);
+                        PlayerPrefs.SetInt("level", 4);
                         SceneManager.LoadScene("ýsgal");
                     }
 
@@ -55,7 +58,8 @@ public class doorExits : MonoBehaviour
 
                 case "ýsgal":
                     Thread.Sleep(500);
-                    SceneManager.LoadScene("umud");
+                    PlayerPrefs.SetInt("level", 5);
+                    SceneManager.LoadScene("heca");
 
                     break;
 

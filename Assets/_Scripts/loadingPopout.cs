@@ -20,7 +20,7 @@ public class loadingPopout : MonoBehaviour
                 SceneManager.LoadScene("memo");
             else 
             {
-                // saveden hangi sahnede oldugunu al, yükle
+                SceneManager.LoadScene(PlayerPrefs.GetInt("level"));
             }
         }
     }

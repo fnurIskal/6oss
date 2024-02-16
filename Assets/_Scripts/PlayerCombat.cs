@@ -12,7 +12,6 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private float attackDamage;
     [SerializeField] private float attackCoolDown;
     [SerializeField] private float attackRange;
-    [SerializeField] private robotShooting damaged;
     private bool canAttack = true;
     private bool canFire = true;
     private bool canWater = true;
@@ -56,11 +55,15 @@ public class PlayerCombat : MonoBehaviour
                     if (hit.CompareTag("Snowman"))
                         hit.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
                     else if (hit.CompareTag("Robot"))
-                        damaged.takeDamaged(attackDamage);
+                        hit.GetComponent<robotShooting>().takeDamaged(attackDamage);
                     else if (hit.CompareTag("Box"))
                         hit.GetComponent<BrokenBox>().StartBreaking();
                     else if (hit.CompareTag("Fireguy"))
                         hit.GetComponent<FireGuy>().EnemyTakeDamage(attackDamage);
+                    else if (hit.CompareTag("Golem"))
+                        hit.GetComponent<GolemHealth>().TakeDamage(attackDamage);
+                    else if (hit.CompareTag("Sakýzguy"))
+                        hit.GetComponent<GumMonsterMovement>().TakeDamage(attackDamage);
                 }
             }
             yield return new WaitForSeconds(attackCoolDown);

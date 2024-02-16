@@ -14,6 +14,8 @@ TagManager:
   - Robot
   - Fireguy
   - Golem
+  - robot
+  - Sakizguy
   layers:
   - Default
   - TransparentFX

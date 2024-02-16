@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
@@ -22,9 +23,9 @@ public class PlayerHealth : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
+        anim.SetTrigger("Damage");
         healthAmount -= damage;
         healthBar.value = healthAmount / 100f;
-        anim.SetTrigger("Damage");
     }
 
     public void Heal(float healingAmount)
@@ -36,6 +37,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Die()
     {
+        SceneManager.LoadScene("DeadScene");
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("Death");
     }

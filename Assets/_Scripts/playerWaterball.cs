@@ -34,5 +34,30 @@ public class playerWaterball : MonoBehaviour
             Destroy(gameObject);
             other.GetComponent<FireGuy>().EnemyTakeDamage(15);
         }
+        else if (other.CompareTag("Snowman"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<EnemyHealth>().TakeDamage(5);
+        }
+        else if (other.CompareTag("Robot"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<robotShooting>().takeDamaged(10);
+        }
+        else if (other.CompareTag("Box"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<BrokenBox>().StartBreaking();
+        }
+        else if (other.CompareTag("Golem"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<GolemHealth>().TakeDamage(10);
+        }
+        else if (other.CompareTag("Sakýzguy"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<GumMonsterMovement>().TakeDamage(10);
+        }
     }
 }

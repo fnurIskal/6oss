@@ -11,6 +11,7 @@ public class SceneHandler : MonoBehaviour
     public void NewGameYes()
     {
         PlayerPrefs.SetInt("isSaved", 1);
+        PlayerPrefs.SetInt("level", 1);
         loadingPopout.GetComponent<loadingPopout>().isSaved = false;
         loadingPopout.GetComponent<loadingPopout>().enabled = true;
     }
@@ -50,5 +51,9 @@ public class SceneHandler : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+    public void RetryMenu()
+    {
+        SceneManager.LoadScene(PlayerPrefs.GetInt("level"));
     }
 }

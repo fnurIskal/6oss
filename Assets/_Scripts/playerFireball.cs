@@ -34,5 +34,33 @@ public class playerFireball : MonoBehaviour
             Destroy(gameObject);
             other.GetComponent<FireGuy>().EnemyTakeDamage(5);
         }
+        if (other.gameObject.CompareTag("Snowman"))
+        {
+            Debug.Log("a");
+            Destroy(gameObject);
+            other.GetComponent<EnemyHealth>().TakeDamage(15);
+        }
+        if (other.gameObject.CompareTag("Robot"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<robotShooting>().takeDamaged(10);
+        }
+        if (other.gameObject.CompareTag("Box"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<BrokenBox>().StartBreaking();
+        }
+        if (other.gameObject.CompareTag("Golem"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<GolemHealth>().TakeDamage(10);
+        }
+        if (other.gameObject.CompareTag("Sakizguy"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<GumMonsterMovement>().TakeDamage(10);
+        }
+        else
+            Debug.Log("girdi");
     }
 }

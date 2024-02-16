@@ -56,7 +56,7 @@ public class robotShooting : MonoBehaviour
         MovementState state;
         timer += Time.deltaTime;
 
-        if (timer > 1)
+        if (timer > 3)
         {
             timer = 0;
             Instantiate(bullet, bulletPos.position, Quaternion.identity);

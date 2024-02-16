@@ -200,9 +200,9 @@ GameObject:
   - component: {fileID: 7862749295142781325}
   - component: {fileID: 6778387299858774101}
   - component: {fileID: 63325007142544349}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Snowman
-  m_TagString: Enemy
+  m_TagString: Snowman
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
