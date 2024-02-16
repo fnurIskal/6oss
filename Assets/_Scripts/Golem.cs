@@ -50,7 +50,7 @@ public class Golem : MonoBehaviour
             state = MovementState.attack3;
             anim.SetInteger("state", (int)state);
             timer += Time.deltaTime;
-            if (timer > 1)
+            if (timer > 3)
             {
                 timer = 0;
                 Instantiate(head, headPos.position, Quaternion.identity);

@@ -54,7 +54,7 @@ public class playerWaterball : MonoBehaviour
             Destroy(gameObject);
             other.GetComponent<GolemHealth>().TakeDamage(10);
         }
-        else if (other.CompareTag("Sakýzguy"))
+        else if (other.CompareTag("Sakizguy"))
         {
             Destroy(gameObject);
             other.GetComponent<GumMonsterMovement>().TakeDamage(10);

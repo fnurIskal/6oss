@@ -29,38 +29,42 @@ public class playerFireball : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Fireguy"))
-        {
-            Destroy(gameObject);
-            other.GetComponent<FireGuy>().EnemyTakeDamage(5);
-        }
-        if (other.gameObject.CompareTag("Snowman"))
-        {
-            Debug.Log("a");
-            Destroy(gameObject);
-            other.GetComponent<EnemyHealth>().TakeDamage(15);
-        }
-        if (other.gameObject.CompareTag("Robot"))
-        {
-            Destroy(gameObject);
-            other.GetComponent<robotShooting>().takeDamaged(10);
-        }
+        Debug.Log("Trigger entered");
         if (other.gameObject.CompareTag("Box"))
         {
             Destroy(gameObject);
             other.GetComponent<BrokenBox>().StartBreaking();
         }
-        if (other.gameObject.CompareTag("Golem"))
+        else if (other.gameObject.CompareTag("Fireguy"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<FireGuy>().EnemyTakeDamage(5);
+        }
+        else if (other.gameObject.CompareTag("Snowman")) // Diðer "if" ifadelerini "else if" ile kontrol ediyoruz.
+        {
+            Debug.Log("a");
+            Destroy(gameObject);
+            other.GetComponent<EnemyHealth>().TakeDamage(15);
+        }
+        else if (other.gameObject.CompareTag("Robot"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<robotShooting>().takeDamaged(10);
+        }
+        
+        else if (other.gameObject.CompareTag("Golem"))
         {
             Destroy(gameObject);
             other.GetComponent<GolemHealth>().TakeDamage(10);
         }
-        if (other.gameObject.CompareTag("Sakizguy"))
+        else if (other.gameObject.CompareTag("Sakizguy"))
         {
             Destroy(gameObject);
             other.GetComponent<GumMonsterMovement>().TakeDamage(10);
         }
         else
+        {
             Debug.Log("girdi");
+        }
     }
 }

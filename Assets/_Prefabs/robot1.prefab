@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4619706406672784931}
   - component: {fileID: 1523709309544773101}
   - component: {fileID: 7715979083208774559}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1836091468449015496}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pointB
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 6747034806235374368}
   - component: {fileID: 4003082996134106798}
   - component: {fileID: 6472848116289619752}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7040435804376077806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bulletPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,9 +221,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1313245757952530093}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: robot1
-  m_TagString: Untagged
+  m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 893476654751983861}
   - component: {fileID: 731411725072459448}
   - component: {fileID: 542034885917961950}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 776996324186822931}
   - component: {fileID: 864584915589262976}
   - component: {fileID: 3083444930789549208}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: healthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -460,7 +460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3867862952876073954}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pointA
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -491,7 +491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5842924235720161071}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,8 +594,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -19549871
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 955360677, guid: a504f9be2e053a8428f2a24f0613a69c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -709,7 +709,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.08848286, y: -0.088481426}

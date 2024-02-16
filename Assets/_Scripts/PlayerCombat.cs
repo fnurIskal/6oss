@@ -62,7 +62,7 @@ public class PlayerCombat : MonoBehaviour
                         hit.GetComponent<FireGuy>().EnemyTakeDamage(attackDamage);
                     else if (hit.CompareTag("Golem"))
                         hit.GetComponent<GolemHealth>().TakeDamage(attackDamage);
-                    else if (hit.CompareTag("Sakýzguy"))
+                    else if (hit.CompareTag("Sakizguy"))
                         hit.GetComponent<GumMonsterMovement>().TakeDamage(attackDamage);
                 }
             }
