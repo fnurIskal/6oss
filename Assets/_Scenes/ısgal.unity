@@ -707,7 +707,7 @@ Transform:
   m_GameObject: {fileID: 137712368}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.81, y: 22.19, z: -10}
+  m_LocalPosition: {x: -8.02, y: 33.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1036,6 +1036,10 @@ PrefabInstance:
     - target: {fileID: 5001809044836137873, guid: 6a079d25e5733854e99f6f7060de12d4, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862749295142781325, guid: 6a079d25e5733854e99f6f7060de12d4, type: 3}
+      propertyPath: detectRange
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9016541809958946185, guid: 6a079d25e5733854e99f6f7060de12d4, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1379,6 +1383,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 3112462633945638421, guid: 961169d8d28ce52408838aed6d2c09ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732716779472453440, guid: 961169d8d28ce52408838aed6d2c09ba, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776232893271102588, guid: 961169d8d28ce52408838aed6d2c09ba, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320784095002126339, guid: 961169d8d28ce52408838aed6d2c09ba, type: 3}
+      propertyPath: snowmanHealth
+      value: 
+      objectReference: {fileID: 686462293}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1894,7 +1914,7 @@ Transform:
   m_GameObject: {fileID: 633048021}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.81, y: 22.19, z: -10}
+  m_LocalPosition: {x: -8.02, y: 33.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2211,6 +2231,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668904535}
   m_CullTransparentMesh: 1
+--- !u!114 &686462293 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6778387299858774101, guid: 6a079d25e5733854e99f6f7060de12d4, type: 3}
+  m_PrefabInstance: {fileID: 373360300}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1cac815b7c2e3f459cbb2186be3cf6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &693763112
 GameObject:
   m_ObjectHideFlags: 0
@@ -16493,11 +16524,11 @@ PrefabInstance:
       objectReference: {fileID: 992270102}
     - target: {fileID: 8290092529460621851, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.81
+      value: -8.02
       objectReference: {fileID: 0}
     - target: {fileID: 8290092529460621851, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.19
+      value: 33.4
       objectReference: {fileID: 0}
     - target: {fileID: 8290092529460621851, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: m_LocalPosition.z

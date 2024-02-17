@@ -14,7 +14,7 @@ public class EnemyHealth : MonoBehaviour
     void Update()
     {
         healthBar.GetComponent<floatingHealthBar>().UpdateHealthBar(currentHealth, maxHealth);
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 || isDead)
         {
             Die();
         }

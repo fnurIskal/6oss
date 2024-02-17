@@ -40,7 +40,7 @@ public class playerFireball : MonoBehaviour
             Destroy(gameObject);
             other.GetComponent<FireGuy>().EnemyTakeDamage(5);
         }
-        else if (other.gameObject.CompareTag("Snowman")) // Diðer "if" ifadelerini "else if" ile kontrol ediyoruz.
+        else if (other.gameObject.CompareTag("Snowman"))
         {
             Debug.Log("a");
             Destroy(gameObject);

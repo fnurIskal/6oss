@@ -6,23 +6,25 @@ public class doorExits : MonoBehaviour
 {
     private string currentSceneName;
     private PlayerHealth playerHealth;
-    private EnemyHealth snowmanHealth;
+    public EnemyHealth snowmanHealth;
     private void Start()
     {
         playerHealth = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
-        snowmanHealth = GameObject.FindWithTag("Snowman").GetComponent<EnemyHealth>();
     }
     private void Update()
     {
-        if (!snowmanHealth.isDead)
+        if (SceneManager.GetActiveScene().name == "ýsgal")
         {
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        }
-        else
-        {
-            gameObject.GetComponent<SpriteRenderer>().enabled = true;
-            gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            if (!snowmanHealth.isDead)
+            {
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            }
+            else
+            {
+                gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
