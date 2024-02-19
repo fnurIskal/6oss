@@ -10,17 +10,13 @@ public class GolemHealth : MonoBehaviour
     public float currentHealth = 100f;
     public float damage = 5;
     public Golem golem;
-    // Start is called before the first frame update
+    public GameObject healthBar;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         currentHealth = 100f;
     }
-
-    // Update is called once per frame
-   
-
     private void Die()
     {
         if(currentHealth == 0)
@@ -30,8 +26,9 @@ public class GolemHealth : MonoBehaviour
         }
     }
     public void TakeDamage(float damage)
-    {//su ve ateþ için düzenle
+    {
         currentHealth -= damage;
         golem.isTakedDamage = true;
+        healthBar.GetComponent<floatingHealthBar>().UpdateHealthBar(currentHealth, 100f);
     }
 }

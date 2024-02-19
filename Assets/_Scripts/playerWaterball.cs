@@ -29,32 +29,33 @@ public class playerWaterball : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Fireguy"))
-        {
-            Destroy(gameObject);
-            other.GetComponent<FireGuy>().EnemyTakeDamage(15);
-        }
-        else if (other.CompareTag("Snowman"))
-        {
-            Destroy(gameObject);
-            other.GetComponent<EnemyHealth>().TakeDamage(5);
-        }
-        else if (other.CompareTag("Robot"))
-        {
-            Destroy(gameObject);
-            other.GetComponent<robotShooting>().takeDamaged(10);
-        }
-        else if (other.CompareTag("Box"))
+        if (other.gameObject.CompareTag("Box"))
         {
             Destroy(gameObject);
             other.GetComponent<BrokenBox>().StartBreaking();
         }
-        else if (other.CompareTag("Golem"))
+        else if (other.gameObject.CompareTag("Fireguy"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<FireGuy>().EnemyTakeDamage(5);
+        }
+        else if (other.gameObject.CompareTag("Snowman"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<EnemyHealth>().TakeDamage(15);
+        }
+        else if (other.gameObject.CompareTag("Robot"))
+        {
+            Destroy(gameObject);
+            other.GetComponent<robotShooting>().takeDamaged(10);
+        }
+
+        else if (other.gameObject.CompareTag("Golem"))
         {
             Destroy(gameObject);
             other.GetComponent<GolemHealth>().TakeDamage(10);
         }
-        else if (other.CompareTag("Sakizguy"))
+        else if (other.gameObject.CompareTag("Sakizguy"))
         {
             Destroy(gameObject);
             other.GetComponent<GumMonsterMovement>().TakeDamage(10);
