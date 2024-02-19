@@ -106,7 +106,11 @@ public class FireGuy : MonoBehaviour
     {
         anim.SetTrigger("death");
         rb.isKinematic = false;
-       Destroy(gameObject);
+     }
+
+    void destroyobject()
+    {
+        Destroy(gameObject);
     }
 
     public void RestartGame()
