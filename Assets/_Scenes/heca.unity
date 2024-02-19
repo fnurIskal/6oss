@@ -344,7 +344,11 @@ Transform:
   m_GameObject: {fileID: 137712368}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: -15.87, y: 20.04, z: -10}
+=======
+  m_LocalPosition: {x: -6.1, y: 9.7, z: -10}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1007,6 +1011,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Golem
       objectReference: {fileID: 0}
+    - target: {fileID: 880742791144465501, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 880742791144465501, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
+      propertyPath: m_TagString
+      value: Golem
+      objectReference: {fileID: 0}
+    - target: {fileID: 1867091105581464824, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938726863164593505, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3799033327546156216, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.56
@@ -1053,7 +1073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4260916676753465933, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.58
+      value: 32.87
       objectReference: {fileID: 0}
     - target: {fileID: 5416881216590257190, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1061,15 +1081,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5416881216590257190, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 43.89
+      value: 43.88
       objectReference: {fileID: 0}
+    - target: {fileID: 7017287926011253503, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
+      propertyPath: golem
+      value: 
+      objectReference: {fileID: 1855458972}
     - target: {fileID: 8724500643692852140, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.86
       objectReference: {fileID: 0}
     - target: {fileID: 8724500643692852140, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9061340241392034615, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1077,7 +1101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9061340241392034615, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.96
+      value: 10.85
       objectReference: {fileID: 0}
     - target: {fileID: 9173672929180986473, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1085,7 +1109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9173672929180986473, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.76
+      value: 21.91
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1609,11 +1633,19 @@ PrefabInstance:
       objectReference: {fileID: 879177759}
     - target: {fileID: 8290092529460621851, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< Updated upstream
       value: -15.87
       objectReference: {fileID: 0}
     - target: {fileID: 8290092529460621851, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 20.04
+=======
+      value: -6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8290092529460621851, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.7
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 8290092529460621851, guid: 55d50300276da5c4095b9aace6f5039e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15715,6 +15747,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847847545}
   m_CullTransparentMesh: 1
+--- !u!114 &1855458972 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6418056821043913417, guid: f6a1c9a42a01ea94a9eb191c072f9716, type: 3}
+  m_PrefabInstance: {fileID: 332711419}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59da18399be067647b03865892941e43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1889650476
 GameObject:
   m_ObjectHideFlags: 0
@@ -28875,7 +28918,11 @@ Transform:
   m_GameObject: {fileID: 2001280863}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: -15.87, y: 20.04, z: -10}
+=======
+  m_LocalPosition: {x: -6.1, y: 9.7, z: -10}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

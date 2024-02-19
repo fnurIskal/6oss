@@ -54,6 +54,7 @@ public class playerFireball : MonoBehaviour
         
         else if (other.gameObject.CompareTag("Golem"))
         {
+            Debug.Log("c");
             Destroy(gameObject);
             other.GetComponent<GolemHealth>().TakeDamage(10);
         }

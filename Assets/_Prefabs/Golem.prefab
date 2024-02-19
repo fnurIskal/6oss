@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 6418056821043913417}
   - component: {fileID: 7017287926011253503}
   - component: {fileID: 1810181246233478647}
+  - component: {fileID: 1938726863164593505}
   m_Layer: 8
   m_Name: Golem
   m_TagString: Enemy
@@ -255,6 +256,8 @@ MonoBehaviour:
   - {fileID: 6981961661015368130}
   - {fileID: 187295302130987061}
   - {fileID: 3386064210117129927}
+  punchCollider: {fileID: 1810181246233478647}
+  capsuleCollider: {fileID: 1938726863164593505}
   deathTime: 1
 --- !u!114 &7017287926011253503
 MonoBehaviour:
@@ -353,6 +356,41 @@ PolygonCollider2D:
       - {x: 0.48035657, y: -0.0689899}
       - {x: 0.73402846, y: 0.041828692}
   m_UseDelaunayMesh: 0
+--- !u!70 &1938726863164593505
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880742791144465501}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.16989422, y: -0.4443388}
+  m_Size: {x: 3.2645507, y: 3.5259266}
+  m_Direction: 0
 --- !u!1 &1515726128647333397
 GameObject:
   m_ObjectHideFlags: 0

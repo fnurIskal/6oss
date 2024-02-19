@@ -9,6 +9,7 @@ public class GolemHealth : MonoBehaviour
     private Rigidbody2D rb;
     public float currentHealth = 100f;
     public float damage = 5;
+    public Golem golem;
     // Start is called before the first frame update
     private void Start()
     {
@@ -31,5 +32,6 @@ public class GolemHealth : MonoBehaviour
     public void TakeDamage(float damage)
     {//su ve ateþ için düzenle
         currentHealth -= damage;
+        golem.isTakedDamage = true;
     }
 }

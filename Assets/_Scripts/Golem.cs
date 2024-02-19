@@ -19,33 +19,32 @@ public class Golem : MonoBehaviour
     private bool isLeft = true;
     [SerializeField] private GameObject[] spawnPoints;
     private int pointIndex = 0;
-    private PolygonCollider2D punchCollider;
+    public PolygonCollider2D punchCollider;
+    public CapsuleCollider2D capsuleCollider;
     private enum MovementState { idle, attack1, attack2, attack3}
     public float deathTime = 1f;
+    public bool isTakedDamage = false;
+    private float difY;
     void Start()
     {
-        punchCollider = GetComponent<PolygonCollider2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         punchCollider.enabled = false;
-       
+        capsuleCollider.enabled = true;
     }
     void Update()
     {
         newFlip();
         Animations();
-
     }
-   
-    
      void Animations()
     {
-
+        difY = transform.position.y - player.transform.position.y;
         MovementState state;
         float p = Vector2.Distance(transform.position, player.transform.position);
-        //Debug.Log($"Distance to player: {p}");
 
-        if (p < attack3range && p >= attack2range)
+        if (p < attack3range && p >= attack2range && (difY < 5f) && (difY > -5f))
+
         {
             state = MovementState.attack3;
             anim.SetInteger("state", (int)state);
@@ -85,25 +84,19 @@ public class Golem : MonoBehaviour
             state = MovementState.attack1;
             anim.SetInteger("state", (int)state);
         }
-        if (Input.GetKeyDown(KeyCode.J)) // caný 5 azalýyomuþ gibi düþün kýnýk
+        else
+        {
+            state = MovementState.idle;
+            anim.SetInteger("state", (int)state);
+        }
+        if (isTakedDamage)
         {
             anim.SetTrigger("Teleport");
             pointIndex++;
+            isTakedDamage = false;
         }
-        if (Input.GetKeyDown(KeyCode.N)) 
-        {
-            anim.SetTrigger("Hurt");
-           
 
-        }
-       
-        if (Input.GetKeyDown(KeyCode.M)) 
-        {
-            anim.SetTrigger("Death");
-            Invoke("Destroy", deathTime);
 
-        }
-       
     }
     public void Destroy()
     {
@@ -145,8 +138,7 @@ public class Golem : MonoBehaviour
     }
     public void Teleport()
     {
-        gameObject.SetActive(false);
-
+        Debug.Log("aaa");
         if (pointIndex == 1)
         {
             transform.position = spawnPoints[0].transform.position;
@@ -168,7 +160,6 @@ public class Golem : MonoBehaviour
             transform.position = spawnPoints[4].transform.position;
         }
 
-        gameObject.SetActive(true);
     }
    
     public void PunchAttack()
@@ -183,11 +174,13 @@ public class Golem : MonoBehaviour
     public void punchenable()
     {
        punchCollider.enabled = true;
+        capsuleCollider.enabled = false;
     }
 
     public void punchdisable()
     {
         punchCollider.enabled = false;
+        capsuleCollider.enabled = true;
     }
 
 }
