@@ -37,12 +37,12 @@ public class playerWaterball : MonoBehaviour
         else if (other.gameObject.CompareTag("Fireguy"))
         {
             Destroy(gameObject);
-            other.GetComponent<FireGuy>().EnemyTakeDamage(5);
+            other.GetComponent<FireGuy>().EnemyTakeDamage(15);
         }
         else if (other.gameObject.CompareTag("Snowman"))
         {
             Destroy(gameObject);
-            other.GetComponent<EnemyHealth>().TakeDamage(15);
+            other.GetComponent<EnemyHealth>().TakeDamage(5);
         }
         else if (other.gameObject.CompareTag("Robot"))
         {

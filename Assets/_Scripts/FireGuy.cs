@@ -14,10 +14,11 @@ public class FireGuy : MonoBehaviour
     public GameObject bullet;
     private Animator anim;
     public float health;
-    public float maxHealth=10f;
+    public float maxHealth=100f;
     private Rigidbody2D rb;
     private bool isAttacking = false;
     public GameObject bulletSpawnpos;
+    public GameObject healthBar;
     enum MovementState { idle,attack,hurt,death}
     
     void Start()
@@ -90,8 +91,8 @@ public class FireGuy : MonoBehaviour
     }
     public void EnemyTakeDamage(float amount)
     {
-        Debug.Log("!");
         health -= amount;
+        healthBar.GetComponent<floatingHealthBar>().UpdateHealthBar(health, maxHealth);
         if(health<=0)
         {
             die();
