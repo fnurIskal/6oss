@@ -130,7 +130,7 @@ public class robotShooting : MonoBehaviour
         }
         else if (distanceFromPlayer < shootingRange)
         {
-            rb.bodyType = RigidbodyType2D.Static;
+            rb.velocity = Vector2.zero;
             attacking();
         }
         else
