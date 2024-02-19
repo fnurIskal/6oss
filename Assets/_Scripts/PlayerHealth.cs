@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -37,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Die()
     {
-        SceneManager.LoadScene("DeadScene");
+        gameObject.GetComponent<PlayerInput>().enabled = false;
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("Death");
     }
@@ -48,5 +49,14 @@ public class PlayerHealth : MonoBehaviour
             hasKey = true;
             Destroy(collision.gameObject);
         }
+        if (collision.CompareTag("Meat"))
+        {
+            Heal(30f);
+            Destroy(collision.gameObject);
+        }
+    }
+    public void LoadScene()
+    {
+        SceneManager.LoadScene("DeadScene");
     }
 }

@@ -29,7 +29,6 @@ public class playerFireball : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Trigger entered");
         if (other.gameObject.CompareTag("Box"))
         {
             Destroy(gameObject);
@@ -42,7 +41,6 @@ public class playerFireball : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Snowman"))
         {
-            Debug.Log("a");
             Destroy(gameObject);
             other.GetComponent<EnemyHealth>().TakeDamage(15);
         }
@@ -54,7 +52,6 @@ public class playerFireball : MonoBehaviour
         
         else if (other.gameObject.CompareTag("Golem"))
         {
-            Debug.Log("c");
             Destroy(gameObject);
             other.GetComponent<GolemHealth>().TakeDamage(10);
         }
@@ -62,10 +59,6 @@ public class playerFireball : MonoBehaviour
         {
             Destroy(gameObject);
             other.GetComponent<GumMonsterMovement>().TakeDamage(10);
-        }
-        else
-        {
-            Debug.Log("girdi");
         }
     }
 }

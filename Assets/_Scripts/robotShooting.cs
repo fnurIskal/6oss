@@ -149,7 +149,6 @@ public class robotShooting : MonoBehaviour
         if (currentHealth < health)
         {
             state = MovementState.damaged;
-            health = currentHealth;
             anim.SetInteger("state", (int)state);
 
         }
