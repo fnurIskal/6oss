@@ -117,8 +117,8 @@ public class PlayerMovement : MonoBehaviour
     }
     public IEnumerator SetCollider()
     {
-        capsuleCollider.offset = new Vector2(0.008911133f, -1.32495f);
-        capsuleCollider.size = new Vector2(1.264221f, 1.620093f);
+        capsuleCollider.offset = new Vector2(-0.01045859f, -1.981283f);
+        capsuleCollider.size = new Vector2(0.1388395f, 0.147027f);
         yield return new WaitForSeconds(0.6f);
         capsuleCollider.offset = new Vector2(0.008911133f, -0.1000152f);
         capsuleCollider.size = new Vector2(1.264221f, 3.806233f);

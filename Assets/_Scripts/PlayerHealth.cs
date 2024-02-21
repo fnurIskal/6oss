@@ -38,6 +38,8 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Die()
     {
+        healthAmount = 0;
+        healthBar.value = healthAmount / 100f;
         gameObject.GetComponent<PlayerInput>().enabled = false;
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("Death");

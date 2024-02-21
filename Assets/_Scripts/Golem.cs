@@ -91,7 +91,7 @@ public class Golem : MonoBehaviour
         }
         if (isTakedDamage)
         {
-            anim.SetTrigger("Teleport");
+            anim.SetTrigger("Hurt");
             pointIndex++;
             isTakedDamage = false;
         }
@@ -182,5 +182,8 @@ public class Golem : MonoBehaviour
         punchCollider.enabled = false;
         capsuleCollider.enabled = true;
     }
-
+   public void callTeleport()
+    {
+        anim.SetTrigger("Teleport");
+    }
 }

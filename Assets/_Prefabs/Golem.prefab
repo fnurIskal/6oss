@@ -323,9 +323,9 @@ MonoBehaviour:
   - {fileID: 5021163620405851979}
   - {fileID: 5021163620405851979}
   anim: {fileID: 2116764916136138465}
-  attack3range: 100
-  attack2range: 8
-  attack1range: 3.5
+  attack3range: 20
+  attack2range: 5.26
+  attack1range: 3.18
   spawnPoints:
   - {fileID: 5487923968759367926}
   - {fileID: 7636298451508995978}
