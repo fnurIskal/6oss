@@ -18,6 +18,7 @@ TagManager:
   - Sakizguy
   - snowman
   - Meat
+  - Ground
   layers:
   - Default
   - TransparentFX

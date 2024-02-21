@@ -24,6 +24,7 @@ public class robotShooting : MonoBehaviour
     public float currentHealth;
     private float difY;
     private bool canDetect = false;
+    
 
     private enum MovementState { idle, shoot, damaged, death }
 
@@ -39,7 +40,7 @@ public class robotShooting : MonoBehaviour
     }
     void Update()
     {
-        damaged();
+        
         newFlip();
         difY = transform.position.y - player.transform.position.y;
         if ((Vector2.Distance(transform.position, player.transform.position) < lineOfSite) && (difY < 5f) && (difY > -5f))
@@ -142,27 +143,18 @@ public class robotShooting : MonoBehaviour
 
         }
     }
-
-    private void damaged()
-    {
-        MovementState state;
-        if (currentHealth < health)
-        {
-            state = MovementState.damaged;
-            anim.SetInteger("state", (int)state);
-
-        }
-        if (currentHealth <= 0)
-        {
-            state = MovementState.death;
-            anim.SetInteger("state", (int)state);
-
-
-        }
-    }
     public void takeDamaged(float damage)
     {
         currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            anim.SetTrigger("death");
+        }
+        else
+        {
+
+        anim.SetTrigger("hurt");
+        }
         healthBar.UpdateHealthBar(currentHealth, health);
 
     }

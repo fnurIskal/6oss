@@ -333,8 +333,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 4866708434235520067}
   anim: {fileID: 5197680598379055076}
-  maxHealth: 120
-  currentHealth: 120
+  maxHealth: 100
+  currentHealth: 100
   isDead: 0
 --- !u!61 &63325007142544349
 BoxCollider2D:

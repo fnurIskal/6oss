@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 5
-  snowballDamage: 12
+  snowballDamage: 10
 --- !u!50 &3775898980338705367
 Rigidbody2D:
   serializedVersion: 4

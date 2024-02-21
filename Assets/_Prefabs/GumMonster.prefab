@@ -326,8 +326,8 @@ MonoBehaviour:
   retreatDistance: 2.5
   shootingRange: 9
   lineOfSite: 10
-  health: 70
-  maxHealth: 70
+  health: 65
+  maxHealth: 65
   healthBar: {fileID: 369770644063657437}
   startTimeBtwShots: 2
   bullet: {fileID: 5807501795557657574, guid: 16efa941bd1338245846a08a7600e538, type: 3}

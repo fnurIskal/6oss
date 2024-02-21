@@ -37,23 +37,16 @@ public class Golem : MonoBehaviour
         newFlip();
         Animations();
     }
-     void Animations()
+    void Animations()
     {
         difY = transform.position.y - player.transform.position.y;
         MovementState state;
         float p = Vector2.Distance(transform.position, player.transform.position);
 
         if (p < attack3range && p >= attack2range && (difY < 5f) && (difY > -5f))
-
         {
             state = MovementState.attack3;
             anim.SetInteger("state", (int)state);
-            timer += Time.deltaTime;
-            if (timer > 3)
-            {
-                timer = 0;
-                Instantiate(head, headPos.position, Quaternion.identity);
-            }
         }
         else if (p < attack2range && p >= attack1range)
         {
@@ -93,10 +86,15 @@ public class Golem : MonoBehaviour
         {
             anim.SetTrigger("Hurt");
             pointIndex++;
+
             isTakedDamage = false;
         }
 
 
+    }
+    public void InsHead()
+    {
+        Instantiate(head, headPos.position, Quaternion.identity);
     }
     public void Destroy()
     {
@@ -138,7 +136,6 @@ public class Golem : MonoBehaviour
     }
     public void Teleport()
     {
-        Debug.Log("aaa");
         if (pointIndex == 1)
         {
             transform.position = spawnPoints[0].transform.position;
@@ -184,6 +181,7 @@ public class Golem : MonoBehaviour
     }
    public void callTeleport()
     {
-        anim.SetTrigger("Teleport");
+        if(!(pointIndex > 5))
+            anim.SetTrigger("Teleport");
     }
 }

@@ -11,19 +11,23 @@ public class GolemHealth : MonoBehaviour
     public float damage = 5;
     public Golem golem;
     public GameObject healthBar;
+    private bool isDead = false;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         currentHealth = 100f;
     }
+    private void Update()
+    {
+        if (currentHealth <= 0 && !isDead)
+            Die();
+    }
     private void Die()
     {
-        if(currentHealth == 0)
-        {
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("Death");
-        }
+        isDead = true;
     }
     public void TakeDamage(float damage)
     {

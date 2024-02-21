@@ -436,7 +436,7 @@ MonoBehaviour:
   water: {fileID: 4161459299488175348, guid: f5066904d8c72924994c92b9436c0e33, type: 3}
   bulletSpawn: {fileID: 834228438854514479}
   attackDamage: 5
-  attackCoolDown: 1
+  attackCoolDown: 0.5
   attackRange: 5
 --- !u!114 &1534857635109113615
 MonoBehaviour:

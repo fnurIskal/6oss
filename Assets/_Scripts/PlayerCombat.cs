@@ -45,7 +45,7 @@ public class PlayerCombat : MonoBehaviour
         {
             canAttack = false;
             anim.SetTrigger("attack");
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(0.2f);
 
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayers);
             foreach(Collider2D hit in hitEnemies)
@@ -77,11 +77,11 @@ public class PlayerCombat : MonoBehaviour
             canFire = false;
             isAttacking = true;
             anim.SetTrigger("fire");
-            yield return new WaitForSeconds(0.9f);
+            yield return new WaitForSeconds(1f);
 
             Instantiate(fire, bulletSpawn.transform.position, Quaternion.identity);
 
-            yield return new WaitForSeconds(0.6f);
+            yield return new WaitForSeconds(1f);
             canFire = true;
             isAttacking = false;
         }
@@ -94,11 +94,11 @@ public class PlayerCombat : MonoBehaviour
             canWater = false;
             isAttacking = true;
             anim.SetTrigger("water");
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(1f);
 
             Instantiate(water, bulletSpawn.transform.position, Quaternion.identity);
 
-            yield return new WaitForSeconds(0.4789f);
+            yield return new WaitForSeconds(1f);
             canWater = true;
             isAttacking = false;
         }

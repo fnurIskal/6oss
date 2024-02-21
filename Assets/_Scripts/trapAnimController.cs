@@ -5,6 +5,8 @@ public class trapAnimController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Animator animator;
     public string animationName = "Trap4";
+    public Collider2D collider1;
+    public Collider2D collider2;
 
     void Start()
     {
@@ -18,9 +20,14 @@ public class trapAnimController : MonoBehaviour
     public void SetSpriteRendererActive()
     {
         spriteRenderer.enabled = true;
+        collider1.enabled = true;
+        collider2.enabled = true;
+
     }
     public void SetSpriteRendererDeActive()
     {
         spriteRenderer.enabled = false;
+        collider1.enabled = false;
+        collider2.enabled = false;
     }
 }

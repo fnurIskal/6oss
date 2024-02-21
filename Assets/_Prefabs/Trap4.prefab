@@ -116,7 +116,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2569976958775400429}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -169,6 +169,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 3799887840381210846}
   animator: {fileID: 6418739935190711698}
   animationName: Trap4
+  collider1: {fileID: 6522938827555847703}
+  collider2: {fileID: 7104102403255941257}
 --- !u!61 &7104102403255941257
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -176,7 +178,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2569976958775400429}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
