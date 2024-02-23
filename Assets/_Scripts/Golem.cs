@@ -26,6 +26,7 @@ public class Golem : MonoBehaviour
     public bool isTakedDamage = false;
     private float difY;
     public bool isTeleporting = false;
+    [SerializeField] private AudioSource GolemAttackSound;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -38,6 +39,11 @@ public class Golem : MonoBehaviour
         newFlip();
         Animations();
     }
+
+    public void AttackSound()
+    {
+        GolemAttackSound.Play();
+    }
     void Animations()
     {
         difY = transform.position.y - player.transform.position.y;
@@ -46,6 +52,7 @@ public class Golem : MonoBehaviour
 
         if (p < attack3range && p >= attack2range && (difY < 5f) && (difY > -5f))
         {
+            
             state = MovementState.attack3;
             anim.SetInteger("state", (int)state);
         }

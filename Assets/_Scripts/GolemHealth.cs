@@ -12,22 +12,33 @@ public class GolemHealth : MonoBehaviour
     public Golem golem;
     public GameObject healthBar;
     private bool isDead = false;
+    [SerializeField] private AudioSource GolemDeathSound;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         currentHealth = 100f;
     }
+
+    public void DeathSound()
+    {
+        GolemDeathSound.Play();
+    }
     private void Update()
     {
         if (currentHealth <= 0 && !isDead)
-            Die();
+        {
+            Die(); 
+            GolemDeathSound.Play(); 
+        }
     }
     private void Die()
     {
+       
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("Death");
-        isDead = true;
+        isDead = true; 
+       
     }
     public void TakeDamage(float damage)
     {
