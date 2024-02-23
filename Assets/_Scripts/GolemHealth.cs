@@ -29,7 +29,7 @@ public class GolemHealth : MonoBehaviour
         if (currentHealth <= 0 && !isDead)
         {
             Die(); 
-            GolemDeathSound.Play(); 
+     
         }
     }
     private void Die()
