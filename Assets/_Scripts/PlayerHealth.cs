@@ -13,7 +13,10 @@ public class PlayerHealth : MonoBehaviour
     public float healthAmount = 100f;
     private bool isDeath = false;
     public bool hasKey = false;
-  
+    [SerializeField] private AudioSource MeatSound;
+    [SerializeField] private AudioSource HurtSound;
+    [SerializeField] private AudioSource DeathSound;
+
 
     void Update()
     {
@@ -27,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!gameObject.GetComponent<PlayerMovement>().isDashing && !isDeath)
         {
+            HurtSound.Play();
             anim.SetTrigger("Damage");
             healthAmount -= damage;
             healthBar.value = healthAmount / 100f;
@@ -35,6 +39,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Heal(float healingAmount)
     {
+        MeatSound.Play();
         healthAmount += healingAmount;
         healthAmount = Mathf.Clamp(healthAmount, 0, 100);
 
@@ -42,6 +47,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Die()
     {
+        DeathSound.Play();
         healthAmount = 0;
         healthBar.value = healthAmount / 100f;
         gameObject.GetComponent<PlayerInput>().enabled = false;
