@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public float healthAmount = 100f;
     private bool isDeath = false;
     public bool hasKey = false;
+  
 
     void Update()
     {
@@ -24,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        if (!gameObject.GetComponent<PlayerMovement>().isDashing)
+        if (!gameObject.GetComponent<PlayerMovement>().isDashing && !isDeath)
         {
             anim.SetTrigger("Damage");
             healthAmount -= damage;
