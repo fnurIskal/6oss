@@ -7,6 +7,7 @@ public class doorExits : MonoBehaviour
     private string currentSceneName;
     private PlayerHealth playerHealth;
     public EnemyHealth snowmanHealth;
+    [SerializeField] private AudioSource DoorSound;
     private void Start()
     {
         playerHealth = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
@@ -32,6 +33,7 @@ public class doorExits : MonoBehaviour
         currentSceneName = SceneManager.GetActiveScene().name;
         if (collision.CompareTag("Player"))
         {
+            DoorSound.Play();
             switch (currentSceneName)
             {
                 case "memo":

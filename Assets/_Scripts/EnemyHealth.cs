@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
     public float maxHealth;
     public float currentHealth;
     public bool isDead = false;
+    [SerializeField] private AudioSource SnowManDeathSound;
     void Start()
     {
         currentHealth = maxHealth;
@@ -33,6 +34,7 @@ public class EnemyHealth : MonoBehaviour
     {
         isDead = true;
         anim.SetTrigger("death");
+        SnowManDeathSound.Play();
     }
     public void Destroy()
     {

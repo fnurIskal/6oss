@@ -21,7 +21,10 @@ public class FireGuy : MonoBehaviour
     public GameObject healthBar;
     public bool isDamaged = false;
     enum MovementState { idle,attack,hurt,death}
-    
+
+    [SerializeField] private AudioSource FireBallSound;
+    [SerializeField] private AudioSource DieSound;
+
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -74,6 +77,7 @@ public class FireGuy : MonoBehaviour
             isAttacking = true;
             state = MovementState.attack;
             anim.SetInteger("state", (int)state);
+            FireBallSound.Play();
             yield return new WaitForSeconds(3f);
             isAttacking = false;
         }
@@ -112,6 +116,7 @@ public class FireGuy : MonoBehaviour
     }
     void die()
     {
+        DieSound.Play();
         anim.SetTrigger("death");
         rb.isKinematic = false;
      }

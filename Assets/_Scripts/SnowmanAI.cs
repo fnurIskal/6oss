@@ -12,6 +12,7 @@ public class SnowmanAI : MonoBehaviour
     [SerializeField] private EnemyHealth enemyHealth;
     [SerializeField] private float attackInterval;
     [SerializeField] private float detectRange;
+    [SerializeField] private AudioSource SnowBallSound;
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -73,6 +74,7 @@ public class SnowmanAI : MonoBehaviour
     }
     void Attack()
     {
+       
         timer += Time.deltaTime;
         if (timer > attackInterval)
         {
@@ -81,6 +83,7 @@ public class SnowmanAI : MonoBehaviour
     }
     public void ThrowSnowball()
     {
+        SnowBallSound.Play();
         if (sprite.flipX)
             Instantiate(snowball, snowballPos[0].position, Quaternion.identity);
         else

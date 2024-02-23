@@ -16,11 +16,22 @@ public class PlayerCombat : MonoBehaviour
     private bool canFire = true;
     private bool canWater = true;
     private bool isAttacking = false;
+
+    [SerializeField] private AudioSource FireBallSound;
+    [SerializeField] private AudioSource WaterBallSound;
+    [SerializeField] private AudioSource SwordSwingSound;
+    [SerializeField] private AudioSource SwordSwingGolemSound;
+    [SerializeField] private AudioSource SwordSwingSnowmanSound;
+    [SerializeField] private AudioSource SwordSwingRobotSound;
+    [SerializeField] private AudioSource SwordSwingFireguySound;
+    [SerializeField] private AudioSource SwordSwingSakýzguySound;
+
     public void OnAttack(InputAction.CallbackContext context)
     {
         if (context.performed && canAttack)
         {
             StartCoroutine(Attack());
+            
         }
     }
     public void OnFire(InputAction.CallbackContext context)
@@ -28,6 +39,7 @@ public class PlayerCombat : MonoBehaviour
         if (context.performed && canFire)
         {
             StartCoroutine(Fire());
+            FireBallSound.Play();
         }
     }
 
@@ -36,7 +48,13 @@ public class PlayerCombat : MonoBehaviour
         if (context.performed && canWater)
         {
             StartCoroutine(Water());
+            WaterBallSound.Play();
         }
+    }
+
+    public void Sword()
+    {
+        SwordSwingSound.Play();
     }
 
     IEnumerator Attack()
@@ -53,17 +71,33 @@ public class PlayerCombat : MonoBehaviour
                 if (Vector2.Distance(hit.transform.position, transform.position) < attackRange)
                 {
                     if (hit.CompareTag("Snowman"))
+                    {
+                        SwordSwingSnowmanSound.Play();
                         hit.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+                    }
                     else if (hit.CompareTag("Robot"))
+                    {
+                        SwordSwingRobotSound.Play();
                         hit.GetComponent<robotShooting>().takeDamaged(attackDamage);
+                    }
                     else if (hit.CompareTag("Box"))
                         hit.GetComponent<BrokenBox>().StartBreaking();
                     else if (hit.CompareTag("Fireguy"))
+                    {
+                        SwordSwingFireguySound.Play();
                         hit.GetComponent<FireGuy>().EnemyTakeDamage(attackDamage);
+                    }
                     else if (hit.CompareTag("Golem"))
+                    {
+                        SwordSwingGolemSound.Play();
                         hit.GetComponent<GolemHealth>().TakeDamage(attackDamage);
+                    }
                     else if (hit.CompareTag("Sakizguy"))
+                    {
+                        SwordSwingSakýzguySound.Play();
                         hit.GetComponent<GumMonsterMovement>().TakeDamage(attackDamage);
+                    }
+                   
                 }
             }
             yield return new WaitForSeconds(attackCoolDown);

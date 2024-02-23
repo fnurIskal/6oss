@@ -20,6 +20,10 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private bool isPaused = false;
     private enum MovementState {idle, run, jump, fall}
+
+    [SerializeField] private AudioSource JumpSound;
+    [SerializeField] private AudioSource DashSound;
+   
     void Update()
     {
         if (isDashing)
@@ -44,9 +48,9 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         if (isDashing)
-        {
+       
             return;
-        }
+       
         rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
     }
     void Animations()
@@ -56,14 +60,21 @@ public class PlayerMovement : MonoBehaviour
         if (!IsGrounded())
         {
             if (rb.velocity.y > 0f)
+         
                 state = MovementState.jump;
+               
+         
+
             else
                 state = MovementState.fall;
         }
         else
         {
             if (horizontal != 0f)
+         
                 state = MovementState.run;
+               
+           
             else
                 state = MovementState.idle;
         }
@@ -107,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
         canDash = false;
         isDashing = true;
         anim.SetTrigger("dash");
+        DashSound.Play();
         rb.velocity = new Vector2(horizontal * dashSpeed, rb.velocity.y);
         
         yield return new WaitForSeconds(dashDuration);
