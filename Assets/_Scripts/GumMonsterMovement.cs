@@ -14,8 +14,8 @@ public class GumMonsterMovement : MonoBehaviour
 
     [SerializeField] float health, maxHealth = 8f;
     [SerializeField] floatingHealthBar healthBar;
-    
 
+    private Rigidbody2D rb;
     private float timeBtwShots;
     public float startTimeBtwShots;
     public GameObject bullet;
@@ -37,6 +37,8 @@ public class GumMonsterMovement : MonoBehaviour
         timeBtwShots = startTimeBtwShots;
         anim = GetComponent<Animator>();
         healthBar.UpdateHealthBar(health, maxHealth);
+        rb = GetComponent<Rigidbody2D>();
+        rb.isKinematic = true;
     }
 
 
@@ -53,8 +55,10 @@ public class GumMonsterMovement : MonoBehaviour
             Flip();
             isFacingRight = true;
         }
+
         
-        
+
+
     }
 
     private void OnDrawGizmosSelected()
