@@ -31,8 +31,11 @@ public class GolemHealth : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        currentHealth -= damage;
-        golem.isTakedDamage = true;
-        healthBar.GetComponent<floatingHealthBar>().UpdateHealthBar(currentHealth, 100f);
+        if(!gameObject.GetComponent<Golem>().isTeleporting)
+        {
+            currentHealth -= damage;
+            golem.isTakedDamage = true;
+            healthBar.GetComponent<floatingHealthBar>().UpdateHealthBar(currentHealth, 100f);
+        }
     }
 }

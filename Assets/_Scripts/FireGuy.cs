@@ -19,6 +19,7 @@ public class FireGuy : MonoBehaviour
     private bool isAttacking = false;
     public GameObject bulletSpawnpos;
     public GameObject healthBar;
+    public bool isDamaged = false;
     enum MovementState { idle,attack,hurt,death}
     
     void Start()
@@ -91,18 +92,24 @@ public class FireGuy : MonoBehaviour
     }
     public void EnemyTakeDamage(float amount)
     {
-        health -= amount;
-        healthBar.GetComponent<floatingHealthBar>().UpdateHealthBar(health, maxHealth);
-        if(health<=0)
+        if (!isDamaged)
         {
-            die();
-        }
-        else
-        {
-            anim.SetTrigger("hurt");
+            health -= amount;
+            healthBar.GetComponent<floatingHealthBar>().UpdateHealthBar(health, maxHealth);
+            if (health <= 0)
+            {
+                die();
+            }
+            else
+            {
+                anim.SetTrigger("hurt");
+            }
         }
     }
-
+    public void WaitForDamage()
+    {
+        isDamaged = !isDamaged;
+    }
     void die()
     {
         anim.SetTrigger("death");

@@ -24,9 +24,12 @@ public class PlayerHealth : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        anim.SetTrigger("Damage");
-        healthAmount -= damage;
-        healthBar.value = healthAmount / 100f;
+        if (!gameObject.GetComponent<PlayerMovement>().isDashing)
+        {
+            anim.SetTrigger("Damage");
+            healthAmount -= damage;
+            healthBar.value = healthAmount / 100f;
+        }
     }
 
     public void Heal(float healingAmount)

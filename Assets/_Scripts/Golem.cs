@@ -25,6 +25,7 @@ public class Golem : MonoBehaviour
     public float deathTime = 1f;
     public bool isTakedDamage = false;
     private float difY;
+    public bool isTeleporting = false;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -136,6 +137,7 @@ public class Golem : MonoBehaviour
     }
     public void Teleport()
     {
+        isTeleporting = false;
         if (pointIndex == 1)
         {
             transform.position = spawnPoints[0].transform.position;
@@ -157,6 +159,10 @@ public class Golem : MonoBehaviour
             transform.position = spawnPoints[4].transform.position;
         }
 
+    }
+    public void DisableDamage()
+    {
+        isTeleporting = true;
     }
    
     public void PunchAttack()

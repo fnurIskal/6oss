@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashDuration;
     [SerializeField] private float dashCooldown;
     public bool isFacingRight = true;
-    private bool isDashing = false;
+    public bool isDashing = false;
     private bool canDash = true;
     private float horizontal;
     private bool isPaused = false;
@@ -114,13 +114,5 @@ public class PlayerMovement : MonoBehaviour
         
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
-    }
-    public IEnumerator SetCollider()
-    {
-        capsuleCollider.offset = new Vector2(-0.01045859f, -1.981283f);
-        capsuleCollider.size = new Vector2(0.1388395f, 0.147027f);
-        yield return new WaitForSeconds(0.6f);
-        capsuleCollider.offset = new Vector2(0.008911133f, -0.1000152f);
-        capsuleCollider.size = new Vector2(1.264221f, 3.806233f);
     }
 }
