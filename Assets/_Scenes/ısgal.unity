@@ -1070,11 +1070,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3521982024087581078, guid: 6a079d25e5733854e99f6f7060de12d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.957526
+      value: -15.88
       objectReference: {fileID: 0}
     - target: {fileID: 3521982024087581078, guid: 6a079d25e5733854e99f6f7060de12d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.1939383
+      value: 7.34
       objectReference: {fileID: 0}
     - target: {fileID: 3521982024087581078, guid: 6a079d25e5733854e99f6f7060de12d4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1132,6 +1132,18 @@ PrefabInstance:
       propertyPath: attackInterval
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8294579555157849103, guid: 6a079d25e5733854e99f6f7060de12d4, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 8294579555157849103, guid: 6a079d25e5733854e99f6f7060de12d4, type: 3}
+      propertyPath: m_Color.g
+      value: 0.79215693
+      objectReference: {fileID: 0}
+    - target: {fileID: 8294579555157849103, guid: 6a079d25e5733854e99f6f7060de12d4, type: 3}
+      propertyPath: m_Color.r
+      value: 0.68235296
+      objectReference: {fileID: 0}
     - target: {fileID: 9016541809958946185, guid: 6a079d25e5733854e99f6f7060de12d4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1139,6 +1151,14 @@ PrefabInstance:
     - target: {fileID: 9016541809958946185, guid: 6a079d25e5733854e99f6f7060de12d4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9166892023992331163, guid: 6a079d25e5733854e99f6f7060de12d4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000000021071
+      objectReference: {fileID: 0}
+    - target: {fileID: 9166892023992331163, guid: 6a079d25e5733854e99f6f7060de12d4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.34
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2359,10 +2379,10 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!1 &693763112
 GameObject:
   m_ObjectHideFlags: 0

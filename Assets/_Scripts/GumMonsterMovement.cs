@@ -15,7 +15,7 @@ public class GumMonsterMovement : MonoBehaviour
     [SerializeField] float health, maxHealth = 8f;
     [SerializeField] floatingHealthBar healthBar;
 
-    private Rigidbody2D rb;
+  
     private float timeBtwShots;
     public float startTimeBtwShots;
     public GameObject bullet;
@@ -23,7 +23,6 @@ public class GumMonsterMovement : MonoBehaviour
 
     private Transform player;
     private Animator anim;
-    private bool isFacingRight = true;
     enum MovementState { walking, hurt, death, attack}
 
     private void Awake()
@@ -37,29 +36,15 @@ public class GumMonsterMovement : MonoBehaviour
         timeBtwShots = startTimeBtwShots;
         anim = GetComponent<Animator>();
         healthBar.UpdateHealthBar(health, maxHealth);
-        rb = GetComponent<Rigidbody2D>();
-        rb.isKinematic = true;
+      
+        //rb.isKinematic = true;
     }
 
 
     void Update()
     {
         Movement();
-        if ((transform.position.x > player.position.x) && isFacingRight)
-        {
-            Flip();
-            isFacingRight = false;
-        }
-        else if ((transform.position.x < player.position.x) && !isFacingRight)
-        {
-            Flip();
-            isFacingRight = true;
-        }
-
-        
-
-
-    }
+           }
 
     private void OnDrawGizmosSelected()
     {
@@ -84,15 +69,6 @@ public class GumMonsterMovement : MonoBehaviour
             anim.SetInteger("state", (int)state);
 
         }
-       
-        else if (distanceFromPlayer <= retreatDistance)
-        {
-           
-            state = MovementState.walking;
-
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
-            anim.SetInteger("state", (int)state);
-        }
         if (timeBtwShots <= 0 && distanceFromPlayer <= shootingRange)
         {
             
@@ -110,12 +86,6 @@ public class GumMonsterMovement : MonoBehaviour
 
     }
 
-    void Flip()
-    {
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1;
-        transform.localScale = localScale;
-    }
 
     public void Shoot()
     {
@@ -127,18 +97,14 @@ public class GumMonsterMovement : MonoBehaviour
     }
     public void TakeDamage(float damageAmount)
     {
-        MovementState state;
-        
+        anim.SetTrigger("hurt");
         health -=damageAmount;
-        state = MovementState.hurt;
-        anim.SetInteger("state",(int)state);
         healthBar.UpdateHealthBar(health,maxHealth);
         
         if(health <= 0)
         {
-            state = MovementState.death;
-            anim.SetInteger("state",(int)state);            
-            
+            anim.SetTrigger("death");
+
         }
         
     }
