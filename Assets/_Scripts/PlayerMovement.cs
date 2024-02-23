@@ -115,16 +115,19 @@ public class PlayerMovement : MonoBehaviour
     }
     private IEnumerator Dash()
     {
-        canDash = false;
-        isDashing = true;
-        anim.SetTrigger("dash");
-        DashSound.Play();
-        rb.velocity = new Vector2(horizontal * dashSpeed, rb.velocity.y);
-        
-        yield return new WaitForSeconds(dashDuration);
-        isDashing = false;
-        
-        yield return new WaitForSeconds(dashCooldown);
-        canDash = true;
+        if (canDash && !gameObject.GetComponent<PlayerCombat>().isAttacking && !gameObject.GetComponent<PlayerCombat>().isSword)
+        {
+            canDash = false;
+            isDashing = true;
+            anim.SetTrigger("dash");
+            DashSound.Play();
+            rb.velocity = new Vector2(horizontal * dashSpeed, rb.velocity.y);
+
+            yield return new WaitForSeconds(dashDuration);
+            isDashing = false;
+
+            yield return new WaitForSeconds(dashCooldown);
+            canDash = true;
+        }
     }
 }

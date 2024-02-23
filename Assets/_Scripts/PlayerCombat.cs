@@ -15,7 +15,8 @@ public class PlayerCombat : MonoBehaviour
     private bool canAttack = true;
     private bool canFire = true;
     private bool canWater = true;
-    private bool isAttacking = false;
+    public bool isAttacking = false;
+    public bool isSword = false;
 
     [SerializeField] private AudioSource FireBallSound;
     [SerializeField] private AudioSource WaterBallSound;
@@ -59,9 +60,10 @@ public class PlayerCombat : MonoBehaviour
 
     IEnumerator Attack()
     {
-        if (canAttack)
+        if (canAttack && !isAttacking && !gameObject.GetComponent<PlayerMovement>().isDashing)
         {
             canAttack = false;
+            isSword = true;
             anim.SetTrigger("attack");
             yield return new WaitForSeconds(1f);
 
@@ -101,12 +103,13 @@ public class PlayerCombat : MonoBehaviour
                 }
             }
             yield return new WaitForSeconds(attackCoolDown);
+            isSword = false;
             canAttack = true;
         }
     }
     IEnumerator Fire()
     {
-        if (canFire && !isAttacking)
+        if (canFire && !isAttacking && !gameObject.GetComponent<PlayerMovement>().isDashing)
         {
             canFire = false;
             isAttacking = true;
@@ -123,7 +126,7 @@ public class PlayerCombat : MonoBehaviour
 
     IEnumerator Water()
     {
-        if (canWater && !isAttacking)
+        if (canWater && !isAttacking && !gameObject.GetComponent<PlayerMovement>().isDashing)
         {
             canWater = false;
             isAttacking = true;
