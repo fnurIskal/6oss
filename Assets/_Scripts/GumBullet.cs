@@ -8,7 +8,8 @@ public class GumBullet : MonoBehaviour
     public float gumDamage;
     private Transform player;
     private Vector2 target;
-   
+    
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -38,4 +39,5 @@ public class GumBullet : MonoBehaviour
     {
         Destroy(gameObject);
     }
+   
 }

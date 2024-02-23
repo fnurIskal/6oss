@@ -24,6 +24,8 @@ public class GumMonsterMovement : MonoBehaviour
     private Transform player;
     private Animator anim;
     enum MovementState { walking, hurt, death, attack}
+    [SerializeField] private AudioSource GumDeathSound;
+    [SerializeField] private AudioSource GumAttackSound;
 
     private void Awake()
     {
@@ -40,6 +42,10 @@ public class GumMonsterMovement : MonoBehaviour
         //rb.isKinematic = true;
     }
 
+    public void DeathSound()
+    {
+        GumDeathSound.Play();
+    }
 
     void Update()
     {
@@ -90,6 +96,7 @@ public class GumMonsterMovement : MonoBehaviour
     public void Shoot()
     {
         Instantiate(bullet, transform.position, Quaternion.identity);
+        GumAttackSound.Play();
     }
     void Die()
     {

@@ -34,9 +34,11 @@ public class doorExits : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             DoorSound.Play();
+
             switch (currentSceneName)
             {
                 case "memo":
+                    
                     Thread.Sleep(500);
                     PlayerPrefs.SetInt("level", 2);
                     SceneManager.LoadScene("emran");

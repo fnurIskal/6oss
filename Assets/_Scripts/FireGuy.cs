@@ -116,10 +116,15 @@ public class FireGuy : MonoBehaviour
     }
     void die()
     {
-        DieSound.Play();
+        
         anim.SetTrigger("death");
         rb.isKinematic = false;
      }
+
+    public void DeathSound()
+    {
+        DieSound.Play();
+    }
 
     void destroyobject()
     {

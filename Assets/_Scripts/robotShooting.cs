@@ -24,7 +24,9 @@ public class robotShooting : MonoBehaviour
     public float currentHealth;
     private float difY;
     private bool canDetect = false;
-    
+    [SerializeField] private AudioSource RobotDeathSound;
+    [SerializeField] private AudioSource RobotAttackSound;
+
 
     private enum MovementState { idle, shoot, damaged, death }
 
@@ -59,12 +61,14 @@ public class robotShooting : MonoBehaviour
 
         if (timer > 3)
         {
+            RobotAttackSound.Play();
             timer = 0;
             Instantiate(bullet, bulletPos.position, Quaternion.identity);
             state = MovementState.shoot;
             anim.SetInteger("state", (int)state);
         }
     }
+
     void walking()
     {
         MovementState state;
@@ -160,8 +164,17 @@ public class robotShooting : MonoBehaviour
     }
     public void die()
     {
+        
+      
+        
         Destroy(gameObject);
     }
+    public void DeathSound()
+    {
+        RobotDeathSound.Play();
+    }
+
+
 
     private void OnDrawGizmosSelected()
     {

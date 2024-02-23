@@ -322,6 +322,7 @@ MonoBehaviour:
   attackInterval: 2
   detectRange: 15
   SnowBallSound: {fileID: 1203831527029985141}
+  SnowManDeathSound: {fileID: 3926989951203188005}
 --- !u!114 &6778387299858774101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,7 +340,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   isDead: 0
-  SnowManDeathSound: {fileID: 3926989951203188005}
+  RobotDeathSound: {fileID: 3926989951203188005}
 --- !u!61 &63325007142544349
 BoxCollider2D:
   m_ObjectHideFlags: 0

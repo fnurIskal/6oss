@@ -13,6 +13,7 @@ public class SnowmanAI : MonoBehaviour
     [SerializeField] private float attackInterval;
     [SerializeField] private float detectRange;
     [SerializeField] private AudioSource SnowBallSound;
+    [SerializeField] private AudioSource SnowManDeathSound;
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -71,6 +72,10 @@ public class SnowmanAI : MonoBehaviour
         }
         else
             anim.SetBool("isAttacking", false);
+    }
+    public void DeathSound()
+    {
+        SnowManDeathSound.Play();
     }
     void Attack()
     {
