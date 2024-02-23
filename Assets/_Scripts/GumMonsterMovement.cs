@@ -44,7 +44,7 @@ public class GumMonsterMovement : MonoBehaviour
     void Update()
     {
         Movement();
-           }
+    }
 
     private void OnDrawGizmosSelected()
     {
@@ -58,9 +58,9 @@ public class GumMonsterMovement : MonoBehaviour
     void Movement()
     {
         MovementState state;
-        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-       
-        if (distanceFromPlayer < lineOfSite && distanceFromPlayer > shootingRange)
+        float distanceFromPlayer = Vector2.Distance(player.transform.position, transform.position);
+
+         if (distanceFromPlayer < lineOfSite && distanceFromPlayer > shootingRange)
         {
 
             
@@ -68,15 +68,15 @@ public class GumMonsterMovement : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
             anim.SetInteger("state", (int)state);
 
-        }
+        } 
         if (timeBtwShots <= 0 && distanceFromPlayer <= shootingRange)
         {
             
             state = MovementState.attack;
 
             
+   anim.SetInteger("state", (int)state);
             timeBtwShots = startTimeBtwShots;
-            anim.SetInteger("state", (int)state);
 
         }
         else
