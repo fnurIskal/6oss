@@ -37,7 +37,7 @@ public class PlayerCombat : MonoBehaviour
     }
     public void OnFire(InputAction.CallbackContext context)
     {
-        if (context.performed && canFire)
+        if (context.performed && canFire && canWater)
         {
             StartCoroutine(Fire());
             FireBallSound.Play();
@@ -46,7 +46,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void OnWater(InputAction.CallbackContext context)
     {
-        if (context.performed && canWater)
+        if (context.performed && canWater && canFire)
         {
             StartCoroutine(Water());
             WaterBallSound.Play();
