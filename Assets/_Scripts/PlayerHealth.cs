@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private AudioSource MeatSound;
     [SerializeField] private AudioSource HurtSound;
     [SerializeField] private AudioSource DeathSound;
-
+    [SerializeField] private AudioSource KeySound;
 
     void Update()
     {
@@ -39,7 +39,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void Heal(float healingAmount)
     {
-        MeatSound.Play();
         healthAmount += healingAmount;
         healthAmount = Mathf.Clamp(healthAmount, 0, 100);
 
@@ -58,11 +57,13 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.CompareTag("Key"))
         {
+            KeySound.Play();
             hasKey = true;
             Destroy(collision.gameObject);
         }
         if (collision.CompareTag("Meat"))
         {
+            MeatSound.Play();
             Heal(30f);
             Destroy(collision.gameObject);
         }

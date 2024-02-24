@@ -7,6 +7,7 @@ public class BrokenBox : MonoBehaviour
     private BoxCollider2D boxcollider2D;
     private bool isBreaking = false;
     private float breakStartTime;
+    [SerializeField] private AudioSource BreakSound;
     private void Awake()
     {
         particle = GetComponentInChildren<ParticleSystem>();
@@ -26,6 +27,7 @@ public class BrokenBox : MonoBehaviour
     }
     public void StartBreaking()
     {
+        BreakSound.Play();
         particle.Play();
         sr.enabled = false;
         boxcollider2D.enabled = false;

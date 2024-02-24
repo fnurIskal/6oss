@@ -1415,6 +1415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c0be1875f7444f8aeba02976c2b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio1: {fileID: 494484380}
+  audio2: {fileID: 0}
 --- !u!1 &568116121
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,6 +2121,7 @@ MonoBehaviour:
   noSaveGame: {fileID: 106610247}
   pauseMenu: {fileID: 0}
   healthbar: {fileID: 0}
+  img: {fileID: 0}
   volumeSlider: {fileID: 727575455}
 --- !u!1 &900970627
 GameObject:

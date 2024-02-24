@@ -65,7 +65,7 @@ public class PlayerCombat : MonoBehaviour
             canAttack = false;
             isSword = true;
             anim.SetTrigger("attack");
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.2f);
 
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayers);
             foreach(Collider2D hit in hitEnemies)

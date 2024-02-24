@@ -34,7 +34,6 @@ public class doorExits : MonoBehaviour
         currentSceneName = SceneManager.GetActiveScene().name;
         if (collision.CompareTag("Player"))
         {
-            DoorSound.Play();
             switch (currentSceneName)
             {
                 case "memo":
@@ -63,30 +62,35 @@ public class doorExits : MonoBehaviour
     }
     private IEnumerator caseMemo()
     {
+        DoorSound.Play();
         yield return new WaitForSeconds(2f); 
         PlayerPrefs.SetInt("level", 2);
         SceneManager.LoadScene("emran");
     }
     private IEnumerator caseEmrean()
     {
+        DoorSound.Play();
         yield return new WaitForSeconds(2f);
         PlayerPrefs.SetInt("level", 3);
         SceneManager.LoadScene("begum");
     }
     private IEnumerator caseBegum()
     {
+        DoorSound.Play();
         yield return new WaitForSeconds(2f);
         PlayerPrefs.SetInt("level", 4);
         SceneManager.LoadScene("ýsgal");
     }
     private IEnumerator caseIsgal()
     {
+        DoorSound.Play();
         yield return new WaitForSeconds(2f);
         PlayerPrefs.SetInt("level", 5);
         SceneManager.LoadScene("heca");
     }
     private IEnumerator caseHeca()
     {
+        DoorSound.Play();
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("WinScene");
     }

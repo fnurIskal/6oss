@@ -2833,6 +2833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66c0be1875f7444f8aeba02976c2b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio1: {fileID: 0}
+  audio2: {fileID: 0}
 --- !u!82 &992142961
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11550,7 +11552,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 92
-      m_TileSpriteIndex: 94
+      m_TileSpriteIndex: 96
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -12050,7 +12052,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 77
-      m_TileSpriteIndex: 92
+      m_TileSpriteIndex: 94
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15229,16 +15231,16 @@ Tilemap:
     m_Data: {fileID: -755682084, guid: ff54ca3674dd8b1489c5530c52668716, type: 3}
   - m_RefCount: 10
     m_Data: {fileID: 8548681, guid: ff54ca3674dd8b1489c5530c52668716, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -906455178, guid: ff54ca3674dd8b1489c5530c52668716, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 1149709720, guid: ff54ca3674dd8b1489c5530c52668716, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -84814129, guid: ff54ca3674dd8b1489c5530c52668716, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 1149709720, guid: ff54ca3674dd8b1489c5530c52668716, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 1278835063, guid: ff54ca3674dd8b1489c5530c52668716, type: 3}
   - m_RefCount: 5
@@ -105745,6 +105747,14 @@ PrefabInstance:
     - target: {fileID: 3358289726249915628, guid: dd02d76739965f04091a45720741f53e, type: 3}
       propertyPath: m_Constraints
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377674561857431336, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377674561857431336, guid: dd02d76739965f04091a45720741f53e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5117930089073578257, guid: dd02d76739965f04091a45720741f53e, type: 3}
       propertyPath: m_AnchorMax.x
