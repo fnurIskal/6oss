@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     private enum MovementState {idle, run, jump, fall}
 
     [SerializeField] private AudioSource JumpSound;
+    [SerializeField] private AudioSource LandSound;
+    [SerializeField] private AudioSource WalkSound;
     [SerializeField] private AudioSource DashSound;
    
     void Update()
@@ -34,47 +36,28 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         else if (isFacingRight && horizontal < 0f)
             Flip();
-
         Animations();
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Time.timeScale = 0.25f;
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Time.timeScale = 1f;
-        }
     }
     private void FixedUpdate()
     {
         if (isDashing)
-       
             return;
-       
         rb.velocity = new Vector2(horizontal * moveSpeed, rb.velocity.y);
     }
     void Animations()
     {
         MovementState state;
-
         if (!IsGrounded())
         {
             if (rb.velocity.y > 0f)
-         
                 state = MovementState.jump;
-               
-         
-
             else
                 state = MovementState.fall;
         }
         else
         {
             if (horizontal != 0f)
-         
                 state = MovementState.run;
-               
-           
             else
                 state = MovementState.idle;
         }
@@ -129,5 +112,17 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(dashCooldown);
             canDash = true;
         }
+    }
+    public void JumpSoundPlay()
+    {
+        JumpSound.Play();
+    }
+    public void LandSoundPlay()
+    {
+        LandSound.Play();
+    }
+    public void WalkSoundPlay()
+    {
+        WalkSound.Play();
     }
 }

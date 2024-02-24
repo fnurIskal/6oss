@@ -16,6 +16,9 @@ public class SoundEffectsController : MonoBehaviour
     [SerializeField] private AudioSource audio10;
     [SerializeField] private AudioSource audio11;
     [SerializeField] private AudioSource audio12;
+    [SerializeField] private AudioSource audio13;
+    [SerializeField] private AudioSource audio14;
+    [SerializeField] private AudioSource audio15;
     void Start()
     {
         audio1.volume = PlayerPrefs.GetFloat("volume");
@@ -30,6 +33,9 @@ public class SoundEffectsController : MonoBehaviour
         audio10.volume = PlayerPrefs.GetFloat("volume");
         audio11.volume = PlayerPrefs.GetFloat("volume");
         audio12.volume = PlayerPrefs.GetFloat("volume");
+        audio13.volume = PlayerPrefs.GetFloat("volume");
+        audio14.volume = PlayerPrefs.GetFloat("volume");
+        audio15.volume = PlayerPrefs.GetFloat("volume");
     }
     void Update()
     {
@@ -45,5 +51,8 @@ public class SoundEffectsController : MonoBehaviour
         audio10.volume = PlayerPrefs.GetFloat("volume");
         audio11.volume = PlayerPrefs.GetFloat("volume");
         audio12.volume = PlayerPrefs.GetFloat("volume");
+        audio13.volume = PlayerPrefs.GetFloat("volume");
+        audio14.volume = PlayerPrefs.GetFloat("volume");
+        audio15.volume = PlayerPrefs.GetFloat("volume");
     }
 }
