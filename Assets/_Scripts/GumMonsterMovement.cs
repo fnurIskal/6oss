@@ -11,7 +11,7 @@ public class GumMonsterMovement : MonoBehaviour
     public float retreatDistance;
     public float shootingRange;
     public float lineOfSite;
-
+    private float difY;
     [SerializeField] float health, maxHealth = 8f;
     [SerializeField] floatingHealthBar healthBar;
 
@@ -50,6 +50,9 @@ public class GumMonsterMovement : MonoBehaviour
     void Update()
     {
         Movement();
+        healthBar.UpdateHealthBar(health, maxHealth);
+        if (health <= 0)
+            anim.SetTrigger("death");
     }
 
     private void OnDrawGizmosSelected()
@@ -65,8 +68,8 @@ public class GumMonsterMovement : MonoBehaviour
     {
         MovementState state;
         float distanceFromPlayer = Vector2.Distance(player.transform.position, transform.position);
-
-         if (distanceFromPlayer < lineOfSite && distanceFromPlayer > shootingRange)
+        difY = transform.position.y - player.transform.position.y;
+        if (distanceFromPlayer < lineOfSite && distanceFromPlayer > shootingRange && (difY < 5f) && (difY > -5f))
         {
 
             

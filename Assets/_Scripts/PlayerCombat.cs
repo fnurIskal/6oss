@@ -73,33 +73,17 @@ public class PlayerCombat : MonoBehaviour
                 if (Vector2.Distance(hit.transform.position, transform.position) < attackRange)
                 {
                     if (hit.CompareTag("Snowman"))
-                    {
-                        SwordSwingSnowmanSound.Play();
                         hit.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
-                    }
                     else if (hit.CompareTag("Robot"))
-                    {
-                        SwordSwingRobotSound.Play();
                         hit.GetComponent<robotShooting>().takeDamaged(attackDamage);
-                    }
                     else if (hit.CompareTag("Box"))
                         hit.GetComponent<BrokenBox>().StartBreaking();
                     else if (hit.CompareTag("Fireguy"))
-                    {
-                        SwordSwingFireguySound.Play();
                         hit.GetComponent<FireGuy>().EnemyTakeDamage(attackDamage);
-                    }
                     else if (hit.CompareTag("Golem"))
-                    {
-                        SwordSwingGolemSound.Play();
                         hit.GetComponent<GolemHealth>().TakeDamage(attackDamage);
-                    }
                     else if (hit.CompareTag("Sakizguy"))
-                    {
-                        SwordSwingSakýzguySound.Play();
                         hit.GetComponent<GumMonsterMovement>().TakeDamage(attackDamage);
-                    }
-                   
                 }
             }
             yield return new WaitForSeconds(attackCoolDown);
@@ -138,6 +122,27 @@ public class PlayerCombat : MonoBehaviour
             yield return new WaitForSeconds(2f);
             canWater = true;
             isAttacking = false;
+        }
+    }
+    public void AttackSoundEffects()
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayers);
+        foreach (Collider2D hit in hitEnemies)
+        {
+            if (Vector2.Distance(hit.transform.position, transform.position) < attackRange)
+            {
+                if (hit.CompareTag("Snowman"))
+                    SwordSwingSnowmanSound.Play();
+                else if (hit.CompareTag("Robot"))
+                    SwordSwingRobotSound.Play();
+                else if (hit.CompareTag("Fireguy"))
+                    SwordSwingFireguySound.Play();
+                else if (hit.CompareTag("Golem"))
+                    SwordSwingGolemSound.Play();
+                else if (hit.CompareTag("Sakizguy"))
+                    SwordSwingSakýzguySound.Play();
+
+            }
         }
     }
 }

@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 2703944624754440582}
   - component: {fileID: 4855700687343491225}
   - component: {fileID: 3000698764378531132}
+  - component: {fileID: 4967356711513440470}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -453,6 +454,8 @@ MonoBehaviour:
   attackDamage: 5
   attackCoolDown: 1
   attackRange: 5
+  isAttacking: 0
+  isSword: 0
   FireBallSound: {fileID: 8031607503877871966}
   WaterBallSound: {fileID: 7320965975850720646}
   SwordSwingSound: {fileID: 1229325414498693617}
@@ -1646,6 +1649,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4967356711513440470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8290092529460621853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca3cb99cb8265b04c8330b6da00538e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio1: {fileID: 7954242488273941475}
+  audio2: {fileID: 2721063161995632993}
+  audio3: {fileID: 797781662086410459}
+  audio4: {fileID: 1956321890162193924}
+  audio5: {fileID: 1229325414498693617}
+  audio6: {fileID: 8889152462123311437}
+  audio7: {fileID: 2010896204618415143}
+  audio8: {fileID: 8031607503877871966}
+  audio9: {fileID: 7320965975850720646}
+  audio10: {fileID: 2703944624754440582}
+  audio11: {fileID: 4855700687343491225}
+  audio12: {fileID: 3000698764378531132}
 --- !u!1 &8290092529844553397
 GameObject:
   m_ObjectHideFlags: 0

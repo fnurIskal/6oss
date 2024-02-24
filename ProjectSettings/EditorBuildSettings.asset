@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/heca.unity
     guid: 3b8a148b8843f9345aaee48a45a6f456
   - enabled: 1
+    path: Assets/_Scenes/WinScene.unity
+    guid: 0400815f54055154b9b617b9360b4151
+  - enabled: 1
     path: Assets/_Scenes/DeadScene.unity
     guid: 722665a544cf5454e8076f46f162a5a3
   m_configObjects: {}

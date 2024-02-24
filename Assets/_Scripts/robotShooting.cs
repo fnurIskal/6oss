@@ -61,7 +61,7 @@ public class robotShooting : MonoBehaviour
 
         if (timer > 3)
         {
-            RobotAttackSound.Play();
+            AttackSound();
             timer = 0;
             Instantiate(bullet, bulletPos.position, Quaternion.identity);
             state = MovementState.shoot;
@@ -164,18 +164,16 @@ public class robotShooting : MonoBehaviour
     }
     public void die()
     {
-        
-      
-        
         Destroy(gameObject);
     }
     public void DeathSound()
     {
         RobotDeathSound.Play();
     }
-
-
-
+    public void AttackSound()
+    {
+        RobotAttackSound.Play();
+    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, lineOfSite);

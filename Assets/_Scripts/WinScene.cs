@@ -8,6 +8,8 @@ public class WinScene : MonoBehaviour
 {
    public void LastGameMenu()
     {
+        PlayerPrefs.SetInt("isSaved", 1);
+        PlayerPrefs.SetInt("level", 1);
         SceneManager.LoadScene("memo");
     }
     public void QuitGame()

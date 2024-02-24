@@ -32,13 +32,14 @@ public class FireGuy : MonoBehaviour
         health = maxHealth;
         rb= GetComponent<Rigidbody2D>();
         rb.isKinematic = true;
-        
-
     }
-
-    // Update is called once per frame
     void Update()
     {
+        healthBar.GetComponent<floatingHealthBar>().UpdateHealthBar(health, maxHealth);
+        if (health <= 0)
+        {
+            die();
+        }
         MovementState state;
 
         if (Player.position.x < transform.position.x)
@@ -77,7 +78,6 @@ public class FireGuy : MonoBehaviour
             isAttacking = true;
             state = MovementState.attack;
             anim.SetInteger("state", (int)state);
-            FireBallSound.Play();
             yield return new WaitForSeconds(3f);
             isAttacking = false;
         }
@@ -93,6 +93,7 @@ public class FireGuy : MonoBehaviour
     public void SpawnFireball()
     {
         Instantiate(bullet, bulletSpawnpos.transform.position, Quaternion.identity);
+        FireBallSound.Play();
     }
     public void EnemyTakeDamage(float amount)
     {
@@ -116,7 +117,6 @@ public class FireGuy : MonoBehaviour
     }
     void die()
     {
-        
         anim.SetTrigger("death");
         rb.isKinematic = false;
      }
@@ -125,25 +125,8 @@ public class FireGuy : MonoBehaviour
     {
         DieSound.Play();
     }
-
     void destroyobject()
     {
         Destroy(gameObject);
     }
-
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-  
-
-
 }
-//Vector2.Distance(transform.position, Player.position) <= shootingRange)
-        
-
-    
-
-    
-
-    

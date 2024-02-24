@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneHandler : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class SceneHandler : MonoBehaviour
     [SerializeField] private GameObject noSaveGame;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject healthbar;
+    [SerializeField] private GameObject img;
+    [SerializeField] private Slider volumeSlider;
     public void NewGameYes()
     {
         PlayerPrefs.SetInt("isSaved", 1);
@@ -37,11 +40,13 @@ public class SceneHandler : MonoBehaviour
             GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
             GameObject.FindWithTag("Player").GetComponent<Animator>().enabled = false;
             healthbar.SetActive(false);
+            img.SetActive(false);
             pauseMenu.SetActive(true);
         }
         else
         {
             healthbar.SetActive(true);
+            img.SetActive(true);
             pauseMenu.SetActive(false);
             Time.timeScale = 1;
             GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;
@@ -55,5 +60,9 @@ public class SceneHandler : MonoBehaviour
     public void RetryMenu()
     {
         SceneManager.LoadScene(PlayerPrefs.GetInt("level"));
+    }
+    public void SetVolume()
+    {
+        PlayerPrefs.SetFloat("volume", volumeSlider.value);
     }
 }
