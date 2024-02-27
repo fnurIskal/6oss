@@ -202,7 +202,6 @@ GameObject:
   - component: {fileID: 63325007142544349}
   - component: {fileID: 3926989951203188005}
   - component: {fileID: 1203831527029985141}
-  - component: {fileID: 519731544414372380}
   m_Layer: 6
   m_Name: Snowman
   m_TagString: Snowman
@@ -578,20 +577,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &519731544414372380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3237726455569042622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b66c0be1875f7444f8aeba02976c2b7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audio1: {fileID: 3926989951203188005}
-  audio2: {fileID: 1203831527029985141}
 --- !u!1 &3595066619343990162
 GameObject:
   m_ObjectHideFlags: 0

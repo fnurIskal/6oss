@@ -49,7 +49,7 @@ public class PlayerCombat : MonoBehaviour
         if (context.performed && canWater && canFire)
         {
             StartCoroutine(Water());
-            WaterBallSound.Play();
+           
         }
     }
 
@@ -144,5 +144,9 @@ public class PlayerCombat : MonoBehaviour
 
             }
         }
+    }
+   public void WaterSound()
+    {
+        WaterBallSound.Play();
     }
 }

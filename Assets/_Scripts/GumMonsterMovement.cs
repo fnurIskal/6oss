@@ -1,10 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Tilemaps;
 using UnityEngine;
-
-
-
 public class GumMonsterMovement : MonoBehaviour
 {
     public float speed;
@@ -38,8 +32,6 @@ public class GumMonsterMovement : MonoBehaviour
         timeBtwShots = startTimeBtwShots;
         anim = GetComponent<Animator>();
         healthBar.UpdateHealthBar(health, maxHealth);
-      
-        //rb.isKinematic = true;
     }
 
     public void DeathSound()

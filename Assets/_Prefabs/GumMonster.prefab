@@ -118,7 +118,6 @@ GameObject:
   - component: {fileID: 8107511129587572642}
   - component: {fileID: 4769647610645292415}
   - component: {fileID: 9080192793562581469}
-  - component: {fileID: 4439699438370139105}
   m_Layer: 6
   m_Name: GumMonster
   m_TagString: Sakizguy
@@ -418,7 +417,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 210bbae0215a2404e9ef0d1f483afd0d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -502,20 +501,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4439699438370139105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5130583639971367514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b66c0be1875f7444f8aeba02976c2b7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audio1: {fileID: 4769647610645292415}
-  audio2: {fileID: 9080192793562581469}
 --- !u!1 &5133546857339027425
 GameObject:
   m_ObjectHideFlags: 0

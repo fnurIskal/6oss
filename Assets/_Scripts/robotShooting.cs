@@ -152,6 +152,7 @@ public class robotShooting : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
+            rb.velocity = Vector2.zero;
             anim.SetTrigger("death");
         }
         else

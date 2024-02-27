@@ -166,7 +166,6 @@ GameObject:
   - component: {fileID: 7983801317538038675}
   - component: {fileID: 5182353068143863206}
   - component: {fileID: 1116763538404136835}
-  - component: {fileID: 7535980981262447860}
   m_Layer: 6
   m_Name: Fire Guy
   m_TagString: Fireguy
@@ -469,7 +468,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f942634fe1a9ea54c98308ceef6d3465, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -553,20 +552,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7535980981262447860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4660708678250362878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b66c0be1875f7444f8aeba02976c2b7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audio1: {fileID: 5182353068143863206}
-  audio2: {fileID: 1116763538404136835}
 --- !u!1 &7305014829864944877
 GameObject:
   m_ObjectHideFlags: 0

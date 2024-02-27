@@ -29,32 +29,32 @@ public class SnowmanAI : MonoBehaviour
         {
             sprite.flipX = false;
         }
-        if (enemyHealth.currentHealth > 17 && enemyHealth.currentHealth <= 20)
+        if (enemyHealth.currentHealth > 85 && enemyHealth.currentHealth <= 100)
         {
             condition = 1;
             anim.SetInteger("condition", condition);
         }
-        else if (enemyHealth.currentHealth > 14 && enemyHealth.currentHealth <= 17)
+        else if (enemyHealth.currentHealth > 70 && enemyHealth.currentHealth <= 85)
         {
             condition = 2;
             anim.SetInteger("condition", condition);
         }
-        else if (enemyHealth.currentHealth > 11 && enemyHealth.currentHealth <= 14)
+        else if (enemyHealth.currentHealth > 55 && enemyHealth.currentHealth <= 70)
         {
             condition = 3;
             anim.SetInteger("condition", condition);
         }
-        else if (enemyHealth.currentHealth > 8 && enemyHealth.currentHealth <= 11)
+        else if (enemyHealth.currentHealth > 40 && enemyHealth.currentHealth <= 55)
         {
             condition = 4;
             anim.SetInteger("condition", condition);
         }
-        else if (enemyHealth.currentHealth > 4 && enemyHealth.currentHealth <= 8)
+        else if (enemyHealth.currentHealth > 25 && enemyHealth.currentHealth <= 40)
         {
             condition = 5;
             anim.SetInteger("condition", condition);
         }
-        else if (enemyHealth.currentHealth > 0 && enemyHealth.currentHealth <= 4)
+        else if (enemyHealth.currentHealth > 0 && enemyHealth.currentHealth <= 25)
         {
             condition = 6;
             anim.SetInteger("condition", condition);

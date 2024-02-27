@@ -118,7 +118,6 @@ public class FireGuy : MonoBehaviour
     void die()
     {
         anim.SetTrigger("death");
-        rb.isKinematic = false;
      }
 
     public void DeathSound()

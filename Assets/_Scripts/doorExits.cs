@@ -64,28 +64,28 @@ public class doorExits : MonoBehaviour
     {
         DoorSound.Play();
         yield return new WaitForSeconds(2f); 
-        PlayerPrefs.SetInt("level", 2);
+        PlayerPrefs.SetInt("level", 3);
         SceneManager.LoadScene("emran");
     }
     private IEnumerator caseEmrean()
     {
         DoorSound.Play();
         yield return new WaitForSeconds(2f);
-        PlayerPrefs.SetInt("level", 3);
+        PlayerPrefs.SetInt("level", 4);
         SceneManager.LoadScene("begum");
     }
     private IEnumerator caseBegum()
     {
         DoorSound.Play();
         yield return new WaitForSeconds(2f);
-        PlayerPrefs.SetInt("level", 4);
+        PlayerPrefs.SetInt("level", 5);
         SceneManager.LoadScene("ýsgal");
     }
     private IEnumerator caseIsgal()
     {
         DoorSound.Play();
         yield return new WaitForSeconds(2f);
-        PlayerPrefs.SetInt("level", 5);
+        PlayerPrefs.SetInt("level", 6);
         SceneManager.LoadScene("heca");
     }
     private IEnumerator caseHeca()

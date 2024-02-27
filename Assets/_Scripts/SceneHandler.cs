@@ -11,6 +11,7 @@ public class SceneHandler : MonoBehaviour
     [SerializeField] private GameObject healthbar;
     [SerializeField] private GameObject img;
     [SerializeField] private Slider volumeSlider;
+    [SerializeField] private AudioSource audioSource;
     public void NewGameYes()
     {
         PlayerPrefs.SetInt("isSaved", 1);
@@ -64,5 +65,6 @@ public class SceneHandler : MonoBehaviour
     public void SetVolume()
     {
         PlayerPrefs.SetFloat("volume", volumeSlider.value);
+        audioSource.volume = volumeSlider.value;
     }
 }
